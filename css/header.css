@@ -402,3 +402,238 @@ header nav .nav-elements ul li.active a {
   -webkit-animation: animate-svg-stroke-3 3s cubic-bezier(0.55, 0.055, 0.675, 0.19) .6s both infinite;
           animation: animate-svg-stroke-3 3s cubic-bezier(0.55, 0.055, 0.675, 0.19) .6s both infinite;
 }
+
+
+
+
+
+
+/* responsive */
+
+
+.show-menu {
+  border: 1px solid var(--gray);
+  color: var(--gray);
+  width: 40px;
+  height: 30px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: 0.4s;
+  cursor: pointer;
+  display: none;
+  background: linear-gradient(0, rgba(12, 79, 137, 1) 0%, rgba(43, 169, 224, 1) 100%);
+}
+
+.show-menu:hover {
+  color: var(--primary1);
+  border: 1px solid var(--primary1);
+}
+.responsive-menu .nav-icons{
+  justify-content: center ;
+}
+
+
+
+/* responsive */
+
+.responsive-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: #fff;
+  padding: 10px;
+  bottom: 0;
+  width: 300px;
+  transition: 0.4s;
+  z-index: 10;
+  background-image: url("../images/hero\ section.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.responsive-menu.show {
+  right: 0;
+}
+
+.responsive-menu .search-input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.responsive-menu .search-input button {
+  height: 35px;
+  width: 35px;
+}
+
+.responsive-menu .search-input button svg {
+  width: 25px;
+}
+
+.responsive-menu .search-links a p {
+  font-size: 12px;
+  color: #fff;
+}
+
+.responsive-menu .search-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.responsive-menu .search-links svg {
+  color: #fff;
+  transition: 0.4s;
+  font-size: 17px;
+  width: 17px;
+}
+
+.responsive-menu .search-links svg path {
+  stroke: #fff;
+}
+
+.responsive-menu .links-container {
+  width: 100%;
+  text-align: center;
+}
+
+.responsive-menu .links-container .header-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--black);
+  position: relative;
+  transition: 0.4s;
+  cursor: pointer;
+  height: 40px;
+  color: #fff;
+}
+
+.responsive-menu .links-container .header-link:hover .ctm-menu-custom {
+  display: block;
+}
+
+.responsive-menu .links-container .header-link .ctm-menu-custom {
+  z-index: 9;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #d1d1d178;
+  transition: 0.4s;
+  left: -100%;
+  z-index: 9;
+}
+
+.overlay.show {
+  left: 0;
+}
+
+.responsive-menu .search-input input {
+  background-color: #fff;
+}
+
+.responsive-logo {
+  width: 100%;
+  padding-right: 15px;
+}
+
+
+
+
+
+.remove-mune {
+  position: absolute;
+  top: 35px;
+  left: 15px;
+}
+
+.remove-mune img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  transition: all 0.2s linear;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+.remove-mune span::after {
+  content: "";
+  height: 2px;
+  background-color: var(--color-Primary1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  transition: all 0.6s linear;
+}
+
+.remove-mune span::before {
+  content: "";
+  height: 2px;
+  background-color: var(--color-Primary1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  transition: all 0.2s linear;
+
+  transition-delay: 0.6s;
+}
+
+.responsive-menu.show .remove-mune span::before {
+  transform: rotate(90deg) translateY(-50%);
+}
+
+.responsive-menu.show .remove-mune span {
+  transform: rotate(45deg);
+}
+
+.sub-header {
+  height: auto;
+}
+
+
+
+
+.element_menu_responsive .main-menu .about-company .dropdown{
+  width: 100%;
+}
+
+.element_menu_responsive .main-menu .about-company.language{
+  z-index: 1;
+}
+
+.element_menu_responsive .main-menu .about-company .dropdown-menu{
+    inset: 0px auto auto 50% !important;
+    transform: translate3d(-50%, 52px, 0px) !important;
+}
+
+.element_menu_responsive .main-menu .about-company .dropdown-menu li{
+  width: 100%;
+}
+
+.element_menu_responsive .main-menu .about-company .dropdown-toggle{
+  background-color: var(--primary1);
+  border-radius: 0;
+  color: white;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 50px;
+}
+.element_menu_responsive .main-menu .about-company li a{
+  color: var(--primary1);
+  text-align: center;
+}
+

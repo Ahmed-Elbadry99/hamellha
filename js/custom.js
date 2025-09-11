@@ -81,3 +81,29 @@ var swiper = new Swiper(".mySwiperPartner", {
   },
   autoplay: true
 });
+
+
+
+
+const showMenu = document.querySelector('.show-menu');
+
+if (showMenu) {
+  showMenu.addEventListener("click", () => {
+    document.querySelector('.responsive-menu').classList.add("show")
+    document.querySelector('.overlay').classList.add("show")
+  })
+
+
+  document.querySelector('.overlay').addEventListener("click", () => {
+    document.querySelector('.responsive-menu').classList.remove("show")
+    document.querySelector('.overlay').classList.remove("show")
+  })
+
+
+  document.querySelector('.remove-mune').addEventListener("click", () => {
+    document.querySelector('.responsive-menu').classList.remove("show")
+    document.querySelector('.overlay').classList.remove("show")
+  })
+}
+
+
