@@ -62,3 +62,22 @@ $('.owl-carousel').owlCarousel({
     }
   }
 })
+
+// partner swiper
+
+
+var swiper = new Swiper(".mySwiperPartner", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "6",
+  loop: true,
+  coverflowEffect: {
+    rotate: 45,     // زاوية الميلان (خليها 40-60 للبانوراما)
+    stretch: -10,     // المسافة بينهم
+    depth: -85,     // العمق (يزود البُعد 3D)
+    modifier: 1,    // قوة التأثير
+    slideShadows: true, // يدي ظل للصور على الأطراف
+  },
+  autoplay: true
+});
