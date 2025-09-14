@@ -51,14 +51,25 @@ $('.owl-carousel').owlCarousel({
   nav: true,
   dots: false,
   responsive: {
-    0: {
-      items: 1
+    0:{
+      items:1,
+            nav:false
+
     },
-    600: {
-      items: 3
+    520: {
+      items: 2,
+            nav:false
+    },
+    768: {
+      items: 3,
+      nav:false
     },
     1000: {
-      items: 4
+      items: 3,
+      
+    },
+    1200:{
+      items:4
     }
   }
 })
@@ -70,19 +81,51 @@ var swiper = new Swiper(".mySwiperPartner", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: "6",
+  slidesPerView: 6, // الافتراضي
   loop: true,
   coverflowEffect: {
-    rotate: 45,     // زاوية الميلان (خليها 40-60 للبانوراما)
-    stretch: -10,     // المسافة بينهم
-    depth: -85,     // العمق (يزود البُعد 3D)
-    modifier: 1,    // قوة التأثير
-    slideShadows: true, // يدي ظل للصور على الأطراف
+    rotate: 45,    
+    stretch: -10,    
+    depth: -85,    
+    modifier: 1,    
+    slideShadows: true,
   },
-  autoplay: true
+  autoplay: true,
+  breakpoints: {
+    320: {    // الهواتف الصغيرة
+      slidesPerView: 2,
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: -50,
+      }
+    },
+    480: {   // الهواتف الأكبر
+      slidesPerView: 2,
+      coverflowEffect: {
+        rotate: 35,
+        stretch: -10,
+        depth: -60,
+      }
+    },
+    768: {   // التابلت
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 40,
+        stretch: -8,
+        depth: -70,
+      }
+    },
+    1024: {  // الشاشات الكبيرة
+      slidesPerView: 5,
+      coverflowEffect: {
+        rotate: 45,
+        stretch: -10,
+        depth: -95,
+      }
+    }
+  }
 });
-
-
 
 
 const showMenu = document.querySelector('.show-menu');

@@ -3,11 +3,105 @@
 @media (max-width: 1395px) {
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
+
+  .arrow-c {
+    position: absolute;
+    top: 51%;
+    left: -104%;
+    transform: translateY(-50%) rotate(7deg);
+    z-index: -1;
+    width: 123%;
+  }
+
+
+  .journy-cards .card-p {
+    width: 220px;
+    min-height: 235px;
+
+  }
+
 }
+@media (max-width: 1024px) {
+
+
+  .panner-tree{
+
+    margin: 0 auto;
+  }
+
+  .hero-img{
+        width: 320px;
+    height: 320px;
+  }
+
+    .left-books {
+      position: absolute;
+      left: 9%;
+      width: 130px;
+      height: 50%;
+      bottom: 16%;
+      transform: translateY(25%);
+  }
+  .right-books {
+      position: absolute;
+      right: 3%;
+      width: 230px;
+      bottom: 5%;
+      height: 50%;
+  }
+
+  .hero .hero-text p{
+    font-size: 18px;
+  }
+
+  .hero .hero-text h2
+{
+  font-size: 45px;
+}
+}
+
+
 
 @media (max-width: 992px) {
   
+  /* header */
+
+  header nav{
+    height: 70px;
+  }
+  header .logo {
+    height: 53px;
+}
+
+.hero-img{
+        width: 250px;
+    height: 250px;
+  }
+
+  .left-svg svg,
+  .right-svg svg{
+
+    width: 100px;
+  }
+
+
+
+   .left-books {
+      position: absolute;
+      left: 9%;
+      width: 110px;
+      height: 50%;
+      bottom: 16%;
+      transform: translateY(25%);
+  }
+  .right-books {
+      position: absolute;
+      right: 3%;
+      width: 210px;
+      bottom: 5%;
+      height: 50%;
+  }
 
  .nav-elements,
   .nav-actions{
@@ -22,4 +116,450 @@
     color: white;
   }
 
+
+  /* about */
+
+  
+  .about .row{
+
+    flex-direction: column-reverse;
+  }
+
+  .comman-questions .row{
+    flex-direction: column-reverse;
+    gap: 50px;
+    margin-top: 30px;
+  }
+
+  .journy-cards .card-p {
+    width: 185px;
+    min-height: 205px;
+  }
+
+
+  .best-seller-owl-containrt{
+    width: 100%;
+  }
+  .footer-body .row {
+    row-gap: 35px;
+  }
+
+  .footer-body .row .col-lg-3:first-child{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+  
+  section.responsive-menu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    padding: 30px 0;
+    background-color: var(--color-secondary);
+    overflow: scroll;
+  }
+  section.responsive-menu.show .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  section.responsive-menu.show .nav-list li {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  section.responsive-menu.show .nav-list li.active {
+    background-color: var(--color-Primary1);
+    color: var(--color-white  );
+  }
+  section.responsive-menu.show .nav-list li.active a {
+    color: var(--color-white);
+  }
+  section.responsive-menu.show .nav-list li a {
+    font-size: 16px;
+    color: var(--color-Primary1);
+    font-weight: 600;
+  }
+  .responsive-menu .menu-icon{
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+  }
+
+  .responsive-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .remove-mune i{
+    color: white;
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 768px){
+
+
+
+  .hero .hero-text{
+    width: 90%;
+  }
+
+  .hero .hero-text P{
+    font-size: 17px;
+  }
+  .left-svg svg,
+  .right-svg svg{
+
+    width: 70px;
+  }
+
+  .left-books {
+      position: absolute;
+      left: 9%;
+      width: 90px;
+      height: 50%;
+      bottom: 9%;
+      transform: translateY(25%);
+  }
+  .right-books {
+      position: absolute;
+      right: 5%;
+      width: 150px;
+      bottom: 0%;
+      height: 50%;
+  }
+
+.sub-title {
+    font-size: 40px;
+
+  }
+  
+  .our-products .our-products-items .products-item .item-img {
+      width: 90px;
+      height: 90px;
+
+  }
+
+
+  .m-section {
+    margin: 50px 0;
+}
+
+
+
+      .journy-cards .card-p {
+        width: 170px;
+        min-height: 185px;
+    }
+
+    .journy-cards .card-p h4 {
+      font-size: 18px;
+      color: var(--color-black);
+    }
+
+    .journy-cards .card-p p {
+      font-size: 15px;
+      color: var(--color-text);
+      text-align: center;
+    }
+
+    .arrow-c {
+        position: absolute;
+        top: 51%;
+        left: -100%;
+        transform: translateY(-50%) rotate(7deg);
+        z-index: -1;
+        width: 116%;
+    }
+
+
+    .journy-cards .card-qq{
+      margin-left: 50px;
+    }
+
+    .journy-cards .card-qq:last-child{
+      margin-left: 0;
+    }
+
+    .journy-cards{
+      row-gap: 40px;
+      justify-content: space-between;
+    }
+}
+
+
+@media(max-width: 670px){
+
+      .journy-cards .card-p {
+        width: 150px;
+        min-height: 160px;
+    }
+
+    .journy-cards .card-p p {
+      font-size: 13px;
+    }
+
+    .journy-cards .card-p h4 {
+      font-size: 16px;
+    }
+
+    
+   
+    
+
+
+    .women-img .sign img {
+      top: -36px;
+      right: -37px;
+    }
+
+    .sub-paragraph{
+      width: 90%;
+      font-size: 18px;
+    }
+
+    .footer-end{
+
+      justify-content: center;
+    }
+}
+
+@media(max-width: 600px){
+
+  .join-panner{
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+
+
+  .panner-text{
+    text-align: center;
+  }
+
+  .panner-text a{
+    margin: 0 auto;
+  }
+
+
+}
+@media(max-width: 570px){
+
+  /* header */
+
+
+    header nav{
+    height: 60px;
+  }
+  header .logo {
+    height: 45px;
+}
+
+
+  .hero-img{
+        width: 200px;
+    height: 200px;
+  }
+
+
+      .right-books {
+        position: absolute;
+        right: 1%;
+        width: 150px;
+        bottom: 0%;
+        height: 50%;
+    }
+
+
+        .left-books {
+        position: absolute;
+        left: 8%;
+        width: 90px;
+        height: 50%;
+        bottom: 14%;
+        transform: translateY(25%);
+    }
+
+    .left-svg svg,
+  .right-svg svg{
+
+    width: 50px;
+  }
+
+    .hero .hero-text h2
+{
+  font-size: 35px;
+}
+
+
+  .sub-title {
+    font-size: 34px;
+
+  }
+
+  .about .text-header p{
+    font-size: 18px;
+  }
+
+  .about .text-body p{
+    font-size: 16px;
+  }
+  .stats{
+    justify-content: center;
+  }
+
+   .our-products .our-products-items .products-item .item-img {
+      width: 70px;
+      height: 70px;
+
+  }
+
+  .our-products .our-products-items .products-item p {
+    font-size: 16px;
+  }
+
+  .m-section {
+    margin: 40px 0;
+}
+
+.journy-cards .card-qq:last-child  {
+  margin: 0 auto; /* هذا يخلي الكرت في الوسط */
+}
+
+
+.journy-cards .card-qq:nth-child(2){
+  margin-left: 0;
+}
+.journy-cards .card-qq:nth-child(2) .arrow-c{
+display: none;
+}
+
+
+  .footer-top-send {
+    width: 100%;
+  }
+
+  .footer-top-send form{
+
+    width: 85%;
+  }
+
+}
+
+@media(max-width: 425px){
+
+
+/* header */
+
+    .right-books {
+        position: absolute;
+        right: 0%;
+        width: 130px;
+        bottom: 0%;
+        height: 50%;
+    }
+
+
+        .left-books {
+        position: absolute;
+        left: 8%;
+        width: 75px;
+        height: 50%;
+        bottom: 14%;
+        transform: translateY(25%);
+    }
+
+        .hero .hero-text h2
+{
+  font-size: 30px;
+}
+
+
+   .journy-cards .card-qq{
+      margin-left: 20px;
+    }
+
+
+    
+     .bg-questions svg{
+      width: 260px;
+    }
+
+    .question-image img{
+      height: 260px;
+    }
+
+    .women-img .sign{
+      width: 50px;
+      height: 55px;
+    }
+
+    .footer-top-send form{
+
+    width: 100%;
+  }
+
+  .footer-top-send form button{
+    min-width: 95px;
+  }
+
+  .footer-end p{
+    font-size: 16px;
+    text-align: center;
+  }
+
+}
+
+@media(max-width: 425px){
+
+
+
+  .journy-cards .card-p{
+
+    gap: 5px;
+  }
+
+      .journy-cards .card-p {
+        width: 140px;
+        min-height: 150px;
+    }
+
+  
+
+}
+
+@media(max-width: 375px){
+
+  .hero-img{
+    width: 200px;
+    height: 200px;
+  }
+
+    .right-books {
+        position: absolute;
+        right: -1%;
+        width: 110px;
+        bottom: -1%;
+        height: 50%;
+    }
+
+
+        .left-books {
+        position: absolute;
+        left: 8%;
+        width: 70px;
+        height: 50%;
+        bottom: 14%;
+        transform: translateY(25%);
+    }
 }

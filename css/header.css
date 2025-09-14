@@ -423,7 +423,7 @@ header nav .nav-elements ul li.active a {
   transition: 0.4s;
   cursor: pointer;
   display: none;
-  background: linear-gradient(0, rgba(12, 79, 137, 1) 0%, rgba(43, 169, 224, 1) 100%);
+  background: var(--color-primary);
 }
 
 .show-menu:hover {
