@@ -31,15 +31,20 @@ function animateCounters() {
 
 // IntersectionObserver لتشغيل العداد كل ما يظهر في الشاشة
 const statsSection = document.querySelector('.stats');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateCounters();
-    }
-  });
-}, { threshold: 0.5 });
 
-observer.observe(statsSection);
+if(statsSection){
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  
+  observer.observe(statsSection);
+}
 
 
 
@@ -150,3 +155,21 @@ if (showMenu) {
 }
 
 
+
+
+// toggle filter
+const toggleBtn = document.getElementById("toggleFilter");
+    const filtersBox = document.getElementById("filtersBox");
+
+    // فتح/غلق عند الضغط على الزر
+    toggleBtn.addEventListener("click", function (e) {
+        e.stopPropagation(); // عشان ما يقفلش مباشرة
+        filtersBox.classList.toggle("show");
+    });
+
+    // قفل عند الضغط خارج الفلتر
+    document.addEventListener("click", function (e) {
+        if (!filtersBox.contains(e.target) && e.target !== toggleBtn) {
+            filtersBox.classList.remove("show");
+        }
+    });

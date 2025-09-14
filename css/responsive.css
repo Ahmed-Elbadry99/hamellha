@@ -203,6 +203,12 @@
     color: white;
     font-size: 20px;
   }
+
+  /* about page */
+
+  .about.page {
+    padding-top: 0;
+  }
 }
 
 @media(max-width: 768px){
@@ -294,6 +300,35 @@
       row-gap: 40px;
       justify-content: space-between;
     }
+
+    /* about page */
+
+
+    .our-goals-body ul{
+      
+  columns: 1;     
+  -webkit-columns: 1;
+  -moz-columns: 1;
+  column-gap:20px;
+    margin-top: 40px;
+  
+
+    }
+
+    .our-goals-body .col-lg-3{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  .our-goals-body .col-lg-3 img{
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .our-goals-body ul p{
+    font-size: 20px;
+  }
 }
 
 
@@ -331,6 +366,25 @@
 
       justify-content: center;
     }
+
+
+    /* about page */
+    
+    .our-goals-body{
+      padding: 20px;
+    }
+    .our-goals-body ul{
+      margin-top: 10px;
+    }
+    .our-goals-body ul p{
+      font-size: 18px;
+    }
+
+     .our-goals-body .col-lg-3 img{
+      width: 90%;
+      margin: 0 auto;
+    }
+
 }
 
 @media(max-width: 600px){
@@ -534,6 +588,12 @@ display: none;
         min-height: 150px;
     }
 
+
+    /* about-page */
+
+    .our-future-card p{
+      font-size: 16px;
+    }
   
 
 }
