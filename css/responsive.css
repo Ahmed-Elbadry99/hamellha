@@ -59,6 +59,14 @@
 {
   font-size: 45px;
 }
+
+
+  .about{
+    margin-top: 0px;
+  }
+  .about .main-container{
+    margin-top: 80px;
+  }
 }
 
 
@@ -125,6 +133,9 @@
     flex-direction: column-reverse;
   }
 
+   .about .main-container{
+    margin-top: 0px;
+  }
   .comman-questions .row{
     flex-direction: column-reverse;
     gap: 50px;
@@ -209,6 +220,21 @@
   .about.page {
     padding-top: 0;
   }
+
+
+  /* our-products */
+
+  .our-products .bg-img {
+    position: absolute;
+    top: -40%;
+    left: -82px;
+    transform-origin: center center;
+    animation: spin 6s 
+linear infinite;
+    will-change: transform;
+    width: 208px;
+    /* height: 125px; */
+}
 }
 
 @media(max-width: 768px){
@@ -385,6 +411,19 @@
       margin: 0 auto;
     }
 
+
+
+        .our-products .bg-img {
+        position: absolute;
+        top: -46%;
+        left: -73px;
+        transform-origin: center center;
+        animation: spin 6s linear infinite;
+        will-change: transform;
+        width: 172px;
+       
+    }
+
 }
 
 @media(max-width: 600px){
@@ -508,6 +547,18 @@ display: none;
     width: 85%;
   }
 
+
+
+    .our-products .bg-img {
+        position: absolute;
+        top: -39%;
+        left: -69px;
+        transform-origin: center center;
+        animation: spin 6s linear infinite;
+        will-change: transform;
+        width: 138px;
+    }
+
 }
 
 @media(max-width: 425px){
@@ -572,6 +623,17 @@ display: none;
     text-align: center;
   }
 
+      .our-products .bg-img {
+        position: absolute;
+        top: -31px;
+        left: -70px;
+        transform-origin: center center;
+        animation: spin 6s linear infinite;
+        will-change: transform;
+        width: 135px;
+    }
+
+
 }
 
 @media(max-width: 425px){
@@ -595,6 +657,7 @@ display: none;
       font-size: 16px;
     }
   
+
 
 }
 

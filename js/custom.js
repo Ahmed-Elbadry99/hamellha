@@ -159,7 +159,9 @@ if (showMenu) {
 
 // toggle filter
 const toggleBtn = document.getElementById("toggleFilter");
-    const filtersBox = document.getElementById("filtersBox");
+
+ if(toggleBtn){
+     const filtersBox = document.getElementById("filtersBox");
 
     // فتح/غلق عند الضغط على الزر
     toggleBtn.addEventListener("click", function (e) {
@@ -173,3 +175,60 @@ const toggleBtn = document.getElementById("toggleFilter");
             filtersBox.classList.remove("show");
         }
     });
+
+ }
+
+
+
+    // details slider
+
+
+
+    function initSliders() {
+  // Unslick لو كانت متفعلة بالفعل
+  if ($('.slider-for').hasClass('slick-initialized')) {
+    $('.slider-for').slick('unslick');
+  }
+  if ($('.slider-nav').hasClass('slick-initialized')) {
+    $('.slider-nav').slick('unslick');
+  }
+
+  // إعادة تهيئة slider-for
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    asNavFor: '.slider-nav'
+  });
+
+  // إعداد slider-nav حسب العرض
+  const isMobile = $(window).width() <= 992;
+
+  $('.slider-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    vertical: !isMobile // عمودي فقط إذا الشاشة أكبر من 992
+  });
+}
+
+// أول تحميل
+$(document).ready(function () {
+  initSliders();
+});
+
+// إعادة تهيئة عند تغيير حجم الشاشة
+$(window).on('resize', function () {
+  clearTimeout(window.resizingSlick); // تأخير منعًا للتكرار
+  window.resizingSlick = setTimeout(function () {
+    initSliders();
+  }, 300);
+});
+
+
+
+

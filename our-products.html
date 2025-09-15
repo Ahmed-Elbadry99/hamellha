@@ -51,7 +51,7 @@
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
 
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
      <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -163,7 +163,8 @@
             <div class="all-products">
                 <div class="all-products-header">
                     <div class="search-product">
-                        <input type="search">
+                        <img src="./images/search-icon.svg" alt="">
+                        <input type="search"  placeholder="ابحث فالمتجر">
                     </div>
                     <div class="filter-product">
                         <a href="javascript:void(0)" class="main_btn" id="toggleFilter">
@@ -175,23 +176,24 @@
                             <!-- التصنيفات -->
                             <div class="filter-section">
                                 <h4>التصنيفات</h4>
-                                <label><input type="checkbox"> الكل</label>
-                                <label><input type="checkbox" checked> التصميم والإبداع</label>
+                                <label><input type="checkbox"> <span>الكل</span></label>
+                                <label><input type="checkbox" checked><span> التصميم والإبداع</span></label>
                                 <div class="sub">
-                                <label><input type="checkbox"> أدوات للمصممين</label>
-                                <label><input type="checkbox" checked> قوالب تصميم</label>
-                                <label><input type="checkbox"> صور وفوتوغرافيا رقمية</label>
+                                <label><input type="checkbox"><span> أدوات للمصممين</span></label>
+                                <label><input type="checkbox" checked> <span>قوالب تصميم</span></label>
+                                <label><input type="checkbox"> <span>صور وفوتوغرافيا رقمية</span></label>
                                 </div>
-                                <label><input type="checkbox"> الكتب الإلكترونية</label>
+                                <label><input type="checkbox"><span> الك تب الإلكترونية</span></label>
                             </div>
 
                             <!-- السعر -->
-                            <div class="filter-section">
+                            <div class="filter-section"> 
                                 <h4>السعر</h4>
                                 <div class="price-inputs">
-                                <input type="number" min="0" value="10"> 
-                                <span>الى</span>
-                                <input type="number" min="0" value="30">
+                                  <input type="number" min="0" value="10"> 
+                                  <span>الى</span>
+                                  <input type="number" min="0" value="30">
+                                  <img src="./images/ryal.svg" alt="">
                                 </div>
                             </div>
 
@@ -208,7 +210,7 @@
                             <!-- الخصومات -->
                             <div class="filter-section">
                                 <h4>الخصومات</h4>
-                                <label><input type="checkbox"> المنتجات المخفضة</label>
+                                <label><input type="checkbox"> <span>المنتجات المخفضة</span></label>
                             </div>
                         </div>
 
@@ -629,6 +631,7 @@
     <!-- dataTables -->
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
     <script src="js/dataTable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="js/custom.js"></script>
   </body>

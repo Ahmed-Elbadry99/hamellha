@@ -1,7 +1,7 @@
 header{
   min-height: 100vh;
   background-image: url('../images/bg-header.png');
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
    position: relative;
@@ -63,6 +63,21 @@ header nav{
   height: 40px;
   border-radius: 50%;
 }
+.nav-actions a.links-actions{
+  border-left: 1px solid #CACACA; 
+  padding-left: 12px;
+}
+
+
+.nav-actions a.links-actions:hover img{
+
+  animation: tada 2s infinite;
+}
+.nav-actions a.links-actions img{
+  width: 25px;
+  height: 25px;
+  
+}
 
 
 header nav .nav-elements ul{
@@ -87,7 +102,7 @@ header nav .nav-elements ul li.active a {
 .nav-actions  {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 18px;
 }
 .nav-actions .avatar img{
 
