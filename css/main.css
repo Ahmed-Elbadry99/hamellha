@@ -2008,6 +2008,28 @@
   width: 75%;
 }
 
+.clients-comment{
+
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.comment-card{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 15px;
+  
+}
+
+.comment-card {
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.comment-card:last-child{
+    border-bottom:none
+}
 .comment-card .card-header{
   display: flex;
   justify-content: space-between;
@@ -2021,3 +2043,38 @@
   height: 40px;
   border-radius: 50%;
 }
+
+.comment-card .date{
+  min-width: 100px;
+}
+
+
+.description .accordion-body,
+.description .accordion-button{
+
+  background-color: #fff;
+}
+
+.description .accordion-item{
+
+    border-bottom: 1px solid #D8D8D8;
+
+}
+
+
+.accordion-button::after{
+  background-color: #fff;
+  background-image: url('../images/top-arrow.svg');
+}
+
+.accordion-button:not(.collapsed)::after{
+    background-image: url('../images/top-arrow.svg');
+ 
+}
+
+
+.other-products .row{
+
+  width: 100%;
+}
+
