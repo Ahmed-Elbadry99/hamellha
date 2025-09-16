@@ -355,6 +355,13 @@ linear infinite;
   .our-goals-body ul p{
     font-size: 20px;
   }
+
+
+  /* offer */
+
+  .offer-panner .panner-text h2{
+    font-size: 28px;
+  }
 }
 
 
@@ -428,6 +435,12 @@ linear infinite;
 
 @media(max-width: 600px){
 
+
+  .main_btn {
+
+    font-size: 16px;
+    height: 40px;
+  }
   .join-panner{
 
     flex-direction: column;
@@ -443,7 +456,34 @@ linear infinite;
   .panner-text a{
     margin: 0 auto;
   }
+    .offer-panner .panner-text h2{
+      font-size: 22px;
+    }
 
+  .offer-panner .panner-actions a{
+    margin: unset;
+  }
+  .offer-panner .panner-actions {
+    justify-content: center;
+  }
+
+
+  .offer-panner .img-panner {
+    height: 229px;
+}
+.offer-panner .expire-offer p{
+  font-size: 18px;
+
+}
+
+.offer-panner .new-price{
+
+  font-size: 24px;
+}
+
+.offer-panner .old-price{
+  font-size: 16px;
+}
 
 }
 @media(max-width: 570px){
@@ -559,6 +599,25 @@ display: none;
         width: 138px;
     }
 
+
+    /* details */
+
+    .other-products .best-seller-card.details::before {
+        position: absolute;
+        content: "";
+        width: 18px;
+        height: 18px;
+        background-image: url(../images/plus.svg);
+        z-index: 10;
+        left: 50%;
+        top: unset;
+        bottom: -28px;
+        transform: translateX(-50%) translateY(0);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
 }
 
 @media(max-width: 425px){
@@ -633,6 +692,12 @@ display: none;
         width: 135px;
     }
 
+
+    /* offer */
+
+    .offer-panner .img-panner {
+        height: 200px;
+    }
 
 }
 

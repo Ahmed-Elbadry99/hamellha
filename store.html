@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>حملها</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" website" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="" />
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="shortcut icon" href="images/logo-meta.png" />
+    <meta name="msapplication-TileColor" content="" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    />
+
+    <!-- datatables -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="css/ar.css" />
+  </head>
+
+  <body>
+    <!-- welcome -->
+    <div class="body_page d-flex flex-column justify-content-between">
+      <main id="app">
+        <header class="pages">
+          <div class="main-container">
+            <nav>
+              <div class="logo">
+                <img src="./images/logo.png" alt="" />
+              </div>
+
+              <div class="nav-elements">
+                <ul>
+                  <li class="active">
+                    <a href="">الرئيسية</a>
+                  </li>
+                  <li>
+                    <a href="">النبذة</a>
+                  </li>
+                  <li>
+                    <a href="">المنتجات</a>
+                  </li>
+                  <li>
+                    <a href="">المتاجر</a>
+                  </li>
+                  <li>
+                    <a href="">تواصل معنا</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="nav-actions">
+                <div class="avatar">
+                  <img src="./images/avatar.svg" alt="" />
+                </div>
+
+                <a href="" class="main_btn"> انضم كبائع </a>
+              </div>
+
+              <!-- responsive menu -->
+              <div class="show-menu">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+        <section class="store-product m-section">
+          <div class="main-container">
+            <div class="store-product-header">
+              <img src="./images/stores2.png" alt="" />
+              <h2>متجر Templify</h2>
+              <div class="rate">
+                <p>4.5</p>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                متجر متخصص في بيع موكابس احترافية تساعد المصممين والعلامات
+                التجارية على عرض أعمالهم بشكل جذاب وسهل الاستخدام.
+              </p>
+              <a href="" class="main_btn"> مراسلة </a>
+            </div>
+
+            <!--  -->
+
+            <!--  -->
+            <div class="all-products">
+              <div class="all-products-header">
+                <div class="search-product">
+                  <img src="./images/search-icon.svg" alt="" />
+                  <input type="search" placeholder="ابحث فالمتجر" />
+                </div>
+                <div class="filter-product">
+                  <a
+                    href="javascript:void(0)"
+                    class="main_btn"
+                    id="toggleFilter"
+                  >
+                    تصفية
+                  </a>
+
+                  <div class="filters" id="filtersBox">
+                    <!-- التصنيفات -->
+                    <div class="filter-section">
+                      <h4>التصنيفات</h4>
+                      <label><input type="checkbox" /> <span>الكل</span></label>
+                      <label
+                        ><input type="checkbox" checked /><span>
+                          التصميم والإبداع</span
+                        ></label
+                      >
+                      <div class="sub">
+                        <label
+                          ><input type="checkbox" /><span>
+                            أدوات للمصممين</span
+                          ></label
+                        >
+                        <label
+                          ><input type="checkbox" checked />
+                          <span>قوالب تصميم</span></label
+                        >
+                        <label
+                          ><input type="checkbox" />
+                          <span>صور وفوتوغرافيا رقمية</span></label
+                        >
+                      </div>
+                      <label
+                        ><input type="checkbox" /><span>
+                          الك تب الإلكترونية</span
+                        ></label
+                      >
+                    </div>
+
+                    <!-- السعر -->
+                    <div class="filter-section">
+                      <h4>السعر</h4>
+                      <div class="price-inputs">
+                        <input type="number" min="0" value="10" />
+                        <span>الى</span>
+                        <input type="number" min="0" value="30" />
+                        <img src="./images/ryal.svg" alt="" />
+                      </div>
+                    </div>
+
+                    <!-- تقييم المنتج -->
+                    <div class="filter-section">
+                      <h4>تقييم المنتج</h4>
+                      <input
+                        type="range"
+                        min="1"
+                        max="5"
+                        value="5"
+                        step="1"
+                        class="range"
+                      />
+                      <div class="range-labels">
+                        <span>1</span>
+                        <span>5</span>
+                      </div>
+                    </div>
+
+                    <!-- الخصومات -->
+                    <div class="filter-section">
+                      <h4>الخصومات</h4>
+                      <label
+                        ><input type="checkbox" />
+                        <span>المنتجات المخفضة</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                  <div class="best-seller-card">
+                    <div class="card-img">
+                      <img src="./images/best-seller1.png" alt="" />
+                    </div>
+                    <div class="card-body">
+                      <span> Templify متجر</span>
+                      <h3>دليل المبتدئين فى تصميم الوايرفريم</h3>
+                      <p>
+                        كتاب عملي يقدّم أساسيات ومفاهيم تصميم الجرافيك بشكل
+                        مبسّط تعلّم أساسيات التصميم بخطوات سهلة...
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="price">
+                        <img src="./images/ryal.svg" alt="" />
+                        50
+                      </div>
+                      <a href="" class="main_btn">
+                        اضف الى السلة
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.3346 10.9997C11.6883 10.9997 12.0274 11.1402 12.2774 11.3902C12.5275 11.6402 12.668 11.9794 12.668 12.333C12.668 12.6866 12.5275 13.0258 12.2774 13.2758C12.0274 13.5259 11.6883 13.6663 11.3346 13.6663C10.981 13.6663 10.6419 13.5259 10.3918 13.2758C10.1418 13.0258 10.0013 12.6866 10.0013 12.333C10.0013 11.593 10.5946 10.9997 11.3346 10.9997ZM0.667969 0.333008H2.84797L3.47464 1.66634H13.3346C13.5114 1.66634 13.681 1.73658 13.806 1.8616C13.9311 1.98663 14.0013 2.1562 14.0013 2.33301C14.0013 2.44634 13.968 2.55967 13.9213 2.66634L11.5346 6.97967C11.308 7.38634 10.868 7.66634 10.368 7.66634H5.4013L4.8013 8.75301L4.7813 8.83301C4.7813 8.87721 4.79886 8.9196 4.83012 8.95086C4.86137 8.98212 4.90377 8.99967 4.94797 8.99967H12.668V10.333H4.66797C4.31435 10.333 3.97521 10.1925 3.72516 9.94248C3.47511 9.69244 3.33464 9.3533 3.33464 8.99967C3.33464 8.76634 3.39464 8.54634 3.49464 8.35967L4.4013 6.72634L2.0013 1.66634H0.667969V0.333008ZM4.66797 10.9997C5.02159 10.9997 5.36073 11.1402 5.61078 11.3902C5.86083 11.6402 6.0013 11.9794 6.0013 12.333C6.0013 12.6866 5.86083 13.0258 5.61078 13.2758C5.36073 13.5259 5.02159 13.6663 4.66797 13.6663C4.31435 13.6663 3.97521 13.5259 3.72516 13.2758C3.47511 13.0258 3.33464 12.6866 3.33464 12.333C3.33464 11.593 3.92797 10.9997 4.66797 10.9997ZM10.668 6.33301L12.5213 2.99967H4.09464L5.66797 6.33301H10.668Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                  <div class="best-seller-card">
+                    <div class="card-img">
+                      <img src="./images/best-seller1.png" alt="" />
+                    </div>
+                    <div class="card-body">
+                      <span> Templify متجر</span>
+                      <h3>دليل المبتدئين فى تصميم الوايرفريم</h3>
+                      <p>
+                        كتاب عملي يقدّم أساسيات ومفاهيم تصميم الجرافيك بشكل
+                        مبسّط تعلّم أساسيات التصميم بخطوات سهلة...
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="price">
+                        <img src="./images/ryal.svg" alt="" />
+                        50
+                      </div>
+                      <a href="" class="main_btn">
+                        اضف الى السلة
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.3346 10.9997C11.6883 10.9997 12.0274 11.1402 12.2774 11.3902C12.5275 11.6402 12.668 11.9794 12.668 12.333C12.668 12.6866 12.5275 13.0258 12.2774 13.2758C12.0274 13.5259 11.6883 13.6663 11.3346 13.6663C10.981 13.6663 10.6419 13.5259 10.3918 13.2758C10.1418 13.0258 10.0013 12.6866 10.0013 12.333C10.0013 11.593 10.5946 10.9997 11.3346 10.9997ZM0.667969 0.333008H2.84797L3.47464 1.66634H13.3346C13.5114 1.66634 13.681 1.73658 13.806 1.8616C13.9311 1.98663 14.0013 2.1562 14.0013 2.33301C14.0013 2.44634 13.968 2.55967 13.9213 2.66634L11.5346 6.97967C11.308 7.38634 10.868 7.66634 10.368 7.66634H5.4013L4.8013 8.75301L4.7813 8.83301C4.7813 8.87721 4.79886 8.9196 4.83012 8.95086C4.86137 8.98212 4.90377 8.99967 4.94797 8.99967H12.668V10.333H4.66797C4.31435 10.333 3.97521 10.1925 3.72516 9.94248C3.47511 9.69244 3.33464 9.3533 3.33464 8.99967C3.33464 8.76634 3.39464 8.54634 3.49464 8.35967L4.4013 6.72634L2.0013 1.66634H0.667969V0.333008ZM4.66797 10.9997C5.02159 10.9997 5.36073 11.1402 5.61078 11.3902C5.86083 11.6402 6.0013 11.9794 6.0013 12.333C6.0013 12.6866 5.86083 13.0258 5.61078 13.2758C5.36073 13.5259 5.02159 13.6663 4.66797 13.6663C4.31435 13.6663 3.97521 13.5259 3.72516 13.2758C3.47511 13.0258 3.33464 12.6866 3.33464 12.333C3.33464 11.593 3.92797 10.9997 4.66797 10.9997ZM10.668 6.33301L12.5213 2.99967H4.09464L5.66797 6.33301H10.668Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                  <div class="best-seller-card">
+                    <div class="card-img">
+                      <img src="./images/best-seller1.png" alt="" />
+                    </div>
+                    <div class="card-body">
+                      <span> Templify متجر</span>
+                      <h3>دليل المبتدئين فى تصميم الوايرفريم</h3>
+                      <p>
+                        كتاب عملي يقدّم أساسيات ومفاهيم تصميم الجرافيك بشكل
+                        مبسّط تعلّم أساسيات التصميم بخطوات سهلة...
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="price">
+                        <img src="./images/ryal.svg" alt="" />
+                        50
+                      </div>
+                      <a href="" class="main_btn">
+                        اضف الى السلة
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.3346 10.9997C11.6883 10.9997 12.0274 11.1402 12.2774 11.3902C12.5275 11.6402 12.668 11.9794 12.668 12.333C12.668 12.6866 12.5275 13.0258 12.2774 13.2758C12.0274 13.5259 11.6883 13.6663 11.3346 13.6663C10.981 13.6663 10.6419 13.5259 10.3918 13.2758C10.1418 13.0258 10.0013 12.6866 10.0013 12.333C10.0013 11.593 10.5946 10.9997 11.3346 10.9997ZM0.667969 0.333008H2.84797L3.47464 1.66634H13.3346C13.5114 1.66634 13.681 1.73658 13.806 1.8616C13.9311 1.98663 14.0013 2.1562 14.0013 2.33301C14.0013 2.44634 13.968 2.55967 13.9213 2.66634L11.5346 6.97967C11.308 7.38634 10.868 7.66634 10.368 7.66634H5.4013L4.8013 8.75301L4.7813 8.83301C4.7813 8.87721 4.79886 8.9196 4.83012 8.95086C4.86137 8.98212 4.90377 8.99967 4.94797 8.99967H12.668V10.333H4.66797C4.31435 10.333 3.97521 10.1925 3.72516 9.94248C3.47511 9.69244 3.33464 9.3533 3.33464 8.99967C3.33464 8.76634 3.39464 8.54634 3.49464 8.35967L4.4013 6.72634L2.0013 1.66634H0.667969V0.333008ZM4.66797 10.9997C5.02159 10.9997 5.36073 11.1402 5.61078 11.3902C5.86083 11.6402 6.0013 11.9794 6.0013 12.333C6.0013 12.6866 5.86083 13.0258 5.61078 13.2758C5.36073 13.5259 5.02159 13.6663 4.66797 13.6663C4.31435 13.6663 3.97521 13.5259 3.72516 13.2758C3.47511 13.0258 3.33464 12.6866 3.33464 12.333C3.33464 11.593 3.92797 10.9997 4.66797 10.9997ZM10.668 6.33301L12.5213 2.99967H4.09464L5.66797 6.33301H10.668Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                  <div class="best-seller-card">
+                    <div class="card-img">
+                      <img src="./images/best-seller1.png" alt="" />
+                    </div>
+                    <div class="card-body">
+                      <span> Templify متجر</span>
+                      <h3>دليل المبتدئين فى تصميم الوايرفريم</h3>
+                      <p>
+                        كتاب عملي يقدّم أساسيات ومفاهيم تصميم الجرافيك بشكل
+                        مبسّط تعلّم أساسيات التصميم بخطوات سهلة...
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="price">
+                        <img src="./images/ryal.svg" alt="" />
+                        50
+                      </div>
+                      <a href="" class="main_btn">
+                        اضف الى السلة
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.3346 10.9997C11.6883 10.9997 12.0274 11.1402 12.2774 11.3902C12.5275 11.6402 12.668 11.9794 12.668 12.333C12.668 12.6866 12.5275 13.0258 12.2774 13.2758C12.0274 13.5259 11.6883 13.6663 11.3346 13.6663C10.981 13.6663 10.6419 13.5259 10.3918 13.2758C10.1418 13.0258 10.0013 12.6866 10.0013 12.333C10.0013 11.593 10.5946 10.9997 11.3346 10.9997ZM0.667969 0.333008H2.84797L3.47464 1.66634H13.3346C13.5114 1.66634 13.681 1.73658 13.806 1.8616C13.9311 1.98663 14.0013 2.1562 14.0013 2.33301C14.0013 2.44634 13.968 2.55967 13.9213 2.66634L11.5346 6.97967C11.308 7.38634 10.868 7.66634 10.368 7.66634H5.4013L4.8013 8.75301L4.7813 8.83301C4.7813 8.87721 4.79886 8.9196 4.83012 8.95086C4.86137 8.98212 4.90377 8.99967 4.94797 8.99967H12.668V10.333H4.66797C4.31435 10.333 3.97521 10.1925 3.72516 9.94248C3.47511 9.69244 3.33464 9.3533 3.33464 8.99967C3.33464 8.76634 3.39464 8.54634 3.49464 8.35967L4.4013 6.72634L2.0013 1.66634H0.667969V0.333008ZM4.66797 10.9997C5.02159 10.9997 5.36073 11.1402 5.61078 11.3902C5.86083 11.6402 6.0013 11.9794 6.0013 12.333C6.0013 12.6866 5.86083 13.0258 5.61078 13.2758C5.36073 13.5259 5.02159 13.6663 4.66797 13.6663C4.31435 13.6663 3.97521 13.5259 3.72516 13.2758C3.47511 13.0258 3.33464 12.6866 3.33464 12.333C3.33464 11.593 3.92797 10.9997 4.66797 10.9997ZM10.668 6.33301L12.5213 2.99967H4.09464L5.66797 6.33301H10.668Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                  <div class="best-seller-card">
+                    <div class="card-img">
+                      <img src="./images/best-seller1.png" alt="" />
+                    </div>
+                    <div class="card-body">
+                      <span> Templify متجر</span>
+                      <h3>دليل المبتدئين فى تصميم الوايرفريم</h3>
+                      <p>
+                        كتاب عملي يقدّم أساسيات ومفاهيم تصميم الجرافيك بشكل
+                        مبسّط تعلّم أساسيات التصميم بخطوات سهلة...
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="price">
+                        <img src="./images/ryal.svg" alt="" />
+                        50
+                      </div>
+                      <a href="" class="main_btn">
+                        اضف الى السلة
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.3346 10.9997C11.6883 10.9997 12.0274 11.1402 12.2774 11.3902C12.5275 11.6402 12.668 11.9794 12.668 12.333C12.668 12.6866 12.5275 13.0258 12.2774 13.2758C12.0274 13.5259 11.6883 13.6663 11.3346 13.6663C10.981 13.6663 10.6419 13.5259 10.3918 13.2758C10.1418 13.0258 10.0013 12.6866 10.0013 12.333C10.0013 11.593 10.5946 10.9997 11.3346 10.9997ZM0.667969 0.333008H2.84797L3.47464 1.66634H13.3346C13.5114 1.66634 13.681 1.73658 13.806 1.8616C13.9311 1.98663 14.0013 2.1562 14.0013 2.33301C14.0013 2.44634 13.968 2.55967 13.9213 2.66634L11.5346 6.97967C11.308 7.38634 10.868 7.66634 10.368 7.66634H5.4013L4.8013 8.75301L4.7813 8.83301C4.7813 8.87721 4.79886 8.9196 4.83012 8.95086C4.86137 8.98212 4.90377 8.99967 4.94797 8.99967H12.668V10.333H4.66797C4.31435 10.333 3.97521 10.1925 3.72516 9.94248C3.47511 9.69244 3.33464 9.3533 3.33464 8.99967C3.33464 8.76634 3.39464 8.54634 3.49464 8.35967L4.4013 6.72634L2.0013 1.66634H0.667969V0.333008ZM4.66797 10.9997C5.02159 10.9997 5.36073 11.1402 5.61078 11.3902C5.86083 11.6402 6.0013 11.9794 6.0013 12.333C6.0013 12.6866 5.86083 13.0258 5.61078 13.2758C5.36073 13.5259 5.02159 13.6663 4.66797 13.6663C4.31435 13.6663 3.97521 13.5259 3.72516 13.2758C3.47511 13.0258 3.33464 12.6866 3.33464 12.333C3.33464 11.593 3.92797 10.9997 4.66797 10.9997ZM10.668 6.33301L12.5213 2.99967H4.09464L5.66797 6.33301H10.668Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="customer-opinions">
+              <section class="comman-questions description m-section">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="accordion">
+                     
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            aria-expanded="true"
+                            data-bs-target="#collapseTwo"
+                            aria-controls="collapseTwo"
+                          >
+                            أراء العملاء
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseTwo"
+                          class="accordion-collapse collapse"
+                        >
+                          <div class="accordion-body">
+                            <div class="main-container">
+                              <div class="opinions-comment">
+                                <div class="comment-card">
+                                    
+                                    <div class="comment-product">
+                                        <div class="img-container">
+                                            <img src="./images/product-comment.png" alt="">
+                                        </div>
+                                        <p>
+                                            نظام غذائى للمبتدئين
+                                        </p>
+                                    </div>
+                                    <div class="our-comment">
+                                        
+
+
+                                        <div class="card-header">
+                                            <div class="card-img-container">
+                                                <div class="card-img">
+                                                    <img src="./images/client-img.png" alt="">
+
+                                                    <div class="comment-text">
+
+                                                        <p>عبد العزيز ال سعود</p>
+                                                        <div class="rate-val">
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    الجدول جميل جدا وممتاز
+                                                </p>
+                                            </div>
+                                            <div class="date">
+                                                <p>
+                                                    30 يناير 2025
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!--  -->
+                                    </div>
+                                </div>
+                               
+                                 <div class="comment-card">
+                                    
+                                    <div class="comment-product">
+                                        <div class="img-container">
+                                            <img src="./images/product-comment.png" alt="">
+                                        </div>
+                                        <p>
+                                            نظام غذائى للمبتدئين
+                                        </p>
+                                    </div>
+                                    <div class="our-comment">
+                                        
+
+
+                                        <div class="card-header">
+                                            <div class="card-img-container">
+                                                <div class="card-img">
+                                                    <img src="./images/client-img.png" alt="">
+
+                                                    <div class="comment-text">
+
+                                                        <p>عبد العزيز ال سعود</p>
+                                                        <div class="rate-val">
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                            <i class="bi bi-star-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    الجدول جميل جدا وممتاز
+                                                </p>
+                                            </div>
+                                            <div class="date">
+                                                <p>
+                                                    30 يناير 2025
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!--  -->
+                                    </div>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--  -->
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <!-- footer -->
+
+        <footer>
+          <div class="main-container">
+            <!--  -->
+            <div class="footer-top">
+              <div class="footer-top-text">
+                <p>ابق على تواصل معنا ليصلك كل جديد</p>
+                <span> كن أول من يحصل على أحدث العقارات والعروض الحصرية! </span>
+              </div>
+              <div class="footer-top-send">
+                <form action="">
+                  <i class="bi bi-envelope"></i>
+                  <input type="email" placeholder="الايميل" />
+                  <button class="main_btn" type="submit">اشترك الأن</button>
+                </form>
+              </div>
+            </div>
+            <!--  -->
+            <div class="footer-body">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-12">
+                  <div class="footer-item">
+                    <div class="footer-logo">
+                      <img src="./images/logo-footer.svg" alt="" />
+                    </div>
+                    <p>
+                      منصّة رقمية متكاملة تجمع بين البائعين والمشترين لبيع وشراء
+                      المنتجات الرقمية بسهولة وأمان، مثل الملفات التعليمية،
+                      القوالب، والكتب الإلكترونية.
+                    </p>
+                  </div>
+                </div>
+                <!--  -->
+
+                <div class="col-lg-3 col-md-4 col-6">
+                  <div class="footer-item">
+                    <ul>
+                      <li>
+                        <a href="">راوبط مهمة</a>
+                      </li>
+                      <li>
+                        <a href="">الصفحة الرئيسية</a>
+                      </li>
+                      <li>
+                        <a href="">منتجاتنا</a>
+                      </li>
+                      <li>
+                        <a href="">المتاجر</a>
+                      </li>
+                      <li>
+                        <a href="">من نحن</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-lg-3 col-md-4 col-6">
+                  <div class="footer-item">
+                    <ul>
+                      <li>
+                        <a href="">خدماتنا</a>
+                      </li>
+                      <li>
+                        <a href="">ملفات تعليمية</a>
+                      </li>
+                      <li>
+                        <a href="">كتب إلكترونية</a>
+                      </li>
+                      <li>
+                        <a href="">وسائل علاجية</a>
+                      </li>
+                      <li>
+                        <a href="">قوالب تصميم</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                  <div class="footer-item">
+                    <ul>
+                      <li>
+                        <a href="">لينكات سريعة</a>
+                      </li>
+                      <li>
+                        <a href="">الشروط والاحكام</a>
+                      </li>
+                      <li>
+                        <a href="">سياسية الخصوصية</a>
+                      </li>
+                      <li>
+                        <a href="">الدعم الفنى</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!--  -->
+              </div>
+            </div>
+            <!--  -->
+
+            <div class="footer-end">
+              <p>جميع الحقوق محفوظة © 2025 - تصميم وتنفيذ شركة جدارة</p>
+              <ul>
+                <li>
+                  <a href="">
+                    <i class="bi bi-snapchat"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+        <!-- rsponsive menu -->
+        <div class="overlay"></div>
+        <section class="responsive-menu">
+          <a href="" class="responsive-logo">
+            <img class="logo" src="./images/logo-footer.svg" alt="" />
+          </a>
+          <!-- links -->
+
+          <div class="menu nav-list">
+            <ul>
+              <li class="active">
+                <a href="">الرئيسية</a>
+              </li>
+              <li>
+                <a href="">النبذة</a>
+              </li>
+              <li>
+                <a href="">المنتجات</a>
+              </li>
+              <li>
+                <a href="">المتاجر</a>
+              </li>
+              <li>
+                <a href="">تواصل معنا</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-icon">
+            <!-- <div class="nav-icons">
+          <a href="#">EN</a>
+        </div>
+        <div class="nav-btn">
+          <a href="./order.html" class="main-btn">اطلب الان</a>
+        </div> -->
+          </div>
+
+          <div class="remove-mune">
+            <i class="bi bi-x-square"></i>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- dataTables -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+    <script src="js/dataTable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="js/custom.js"></script>
+  </body>
+  <!-- end-body
+=================== -->
+</html>
