@@ -50,7 +50,7 @@ if(statsSection){
 
 // owl
 
-$('.owl-carousel').owlCarousel({
+$('.best-seller-owl').owlCarousel({
   loop: true,
   margin: 10,
   nav: true,
@@ -60,6 +60,38 @@ $('.owl-carousel').owlCarousel({
       items:1,
             nav:false
 
+    },
+    520: {
+      items: 2,
+            nav:false
+    },
+    768: {
+      items: 3,
+      nav:false
+    },
+    1000: {
+      items: 3,
+      
+    },
+    1200:{
+      items:4
+    }
+  }
+})
+
+
+
+
+
+$('.category-details-owl').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  dots: false,
+  responsive: {
+    0:{
+      items:1,
+            nav:false
     },
     520: {
       items: 2,
@@ -231,4 +263,22 @@ $(window).on('resize', function () {
 
 
 
+// verification code 
 
+ document.addEventListener('DOMContentLoaded', function() {
+        const inputs = document.querySelectorAll('.code-input');
+
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', function() {
+                if (input.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus(); // Focus on the next input
+                }
+            });
+
+            input.addEventListener('keydown', function(event) {
+                if (event.key === 'Backspace' && input.value.length === 0 && index > 0) {
+                    inputs[index - 1].focus(); // Focus on the previous input when backspacing
+                }
+            });
+        });
+    });
