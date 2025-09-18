@@ -110,6 +110,10 @@ footer .main-container{
     row-gap: 30px;
 }
 
+.footer-end i{
+    color: red;
+    animation: pulse 1s infinite;
+}
 .footer-item p{
     color: white;
     font-size: 16px;

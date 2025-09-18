@@ -82,35 +82,44 @@
         <header class="pages">
           <div class="main-container">
             <nav>
-              <div class="logo">
+              <a href="./index.html" class="logo">
                 <img src="./images/logo.png" alt="" />
-              </div>
+              </a>
 
               <div class="nav-elements">
                 <ul>
                   <li class="active">
-                    <a href="">الرئيسية</a>
+                    <a href="./index.html">الرئيسية</a>
                   </li>
                   <li>
-                    <a href="">النبذة</a>
+                    <a href="./about.html">النبذة</a>
                   </li>
                   <li>
-                    <a href="">المنتجات</a>
+                    <a href="./our-products.html">المنتجات</a>
                   </li>
                   <li>
-                    <a href="">المتاجر</a>
+                    <a href="./stores.html">المتاجر</a>
                   </li>
                   <li>
-                    <a href="">تواصل معنا</a>
+                    <a href="./offers.html">العروض</a>
+                  </li>
+                  <li>
+                    <a href="./index.html#contact">تواصل معنا</a>
                   </li>
                 </ul>
               </div>
               <div class="nav-actions">
-                <div class="avatar">
+                <a href="./cart.html" class="links-actions" >
+                  <img src="./images/cart-nav.svg" alt="" />
+                </a>
+                <a href="./favourite.html" class="links-actions">
+                  <img src="./images/fovourite.svg" alt="" />
+                </a>
+                <a href="./profile.html" class="avatar">
                   <img src="./images/avatar.svg" alt="" />
-                </div>
+                </a>
 
-                <a href="" class="main_btn"> انضم كبائع </a>
+                <a href="" class="main_btn" data-bs-toggle="modal" data-bs-target="#join"> انضم كبائع </a>
               </div>
 
               <!-- responsive menu -->
@@ -619,6 +628,79 @@
           </div>
         </footer>
 
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="join" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              
+              <div class="modal-body">
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <section class="auth login modal-profile">
+                 
+                  <form action="">
+                    <h1> انضم كبائع</h1>
+
+                    <p class="sub-paragraph">
+                      افتح متجرك الرقمي بسهولة وابدأ ببيع منتجاتك الإلكترونية لجمهور واسع. انضم كبائع اليوم واستفد من منصة آمنة، سريعة، وداعمة لنمو أعمالك.
+                    </p>
+
+                    
+                    <div class="form-control-container">
+                    
+
+                      <input type="text"  placeholder=" اسم المتجر  " class="form-control" aria-describedby="passwordHelpBlock">
+                    </div>
+                    <!--  -->
+                    <div class="form-control-container">
+                    
+
+                      <input type="email"  placeholder=" البريد الالكترونى  " class="form-control" aria-describedby="passwordHelpBlock">
+                    </div>
+                    <!--  -->
+                    <div class="form-control-container">
+                    
+
+                      <input type="فثءف" id="inputPassword5" placeholder="  رقم التواصل " class="form-control" aria-describedby="passwordHelpBlock">
+                    </div>
+                    <!--  -->
+                    <div class="form-control-container">
+                    
+
+                      <input type="password" id="inputPassword5" placeholder="   كلمة المرور "   class="form-control" aria-describedby="passwordHelpBlock">
+                    </div>
+                    <!--  -->
+                    <div class="form-control-container">
+                    
+
+                      <input type="password" id="inputPassword5" placeholder="  تأكيد كلمة المرور "   class="form-control" aria-describedby="passwordHelpBlock">
+                    </div>
+                    <!--  -->
+                    <div class="form-control-container">
+                      <textarea name="" id="" placeholder="نبذة عن المتجر"></textarea>
+                    </div>
+                    <!--  -->
+                    <div class="upload-box" onclick="document.getElementById('fileInput').click()">
+                      <img id="preview" src="" alt="صورة المتجر" style="display:none;" />
+                      <span id="uploadText">+ اضف صورة للمتجر</span>
+                    </div>
+
+                    <input type="file" id="fileInput" accept="image/*" style="display:none;" />
+                  
+                    
+                    <button type="submit" class="main_btn">
+                      ارسال 
+                    </button>
+                    
+                  </form>
+                </section>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+
         <!-- rsponsive menu -->
         <div class="overlay"></div>
         <section class="responsive-menu">
@@ -629,22 +711,25 @@
 
           <div class="menu nav-list">
             <ul>
-              <li class="active">
-                <a href="">الرئيسية</a>
-              </li>
-              <li>
-                <a href="">النبذة</a>
-              </li>
-              <li>
-                <a href="">المنتجات</a>
-              </li>
-              <li>
-                <a href="">المتاجر</a>
-              </li>
-              <li>
-                <a href="">تواصل معنا</a>
-              </li>
-            </ul>
+                  <li class="active">
+                    <a href="./index.html">الرئيسية</a>
+                  </li>
+                  <li>
+                    <a href="./about.html">النبذة</a>
+                  </li>
+                  <li>
+                    <a href="./our-products.html">المنتجات</a>
+                  </li>
+                  <li>
+                    <a href="./stores.html">المتاجر</a>
+                  </li>
+                  <li>
+                    <a href="./offers.html">العروض</a>
+                  </li>
+                  <li>
+                    <a href="./index.html#contact">تواصل معنا</a>
+                  </li>
+                </ul>
           </div>
 
           <div class="menu-icon">

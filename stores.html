@@ -80,36 +80,45 @@
           <div class="main-container">
             
            
-            <nav>
-              <div class="logo">
+           <nav>
+              <a href="./index.html" class="logo">
                 <img src="./images/logo.png" alt="" />
-              </div>
+              </a>
 
               <div class="nav-elements">
                 <ul>
                   <li class="active">
-                    <a href="">الرئيسية</a>
+                    <a href="./index.html">الرئيسية</a>
                   </li>
                   <li>
-                    <a href="">النبذة</a>
+                    <a href="./about.html">النبذة</a>
                   </li>
                   <li>
-                    <a href="">المنتجات</a>
+                    <a href="./our-products.html">المنتجات</a>
                   </li>
                   <li>
-                    <a href="">المتاجر</a>
+                    <a href="./stores.html">المتاجر</a>
                   </li>
                   <li>
-                    <a href="">تواصل معنا</a>
+                    <a href="./offers.html">العروض</a>
+                  </li>
+                  <li>
+                    <a href="./index.html#contact">تواصل معنا</a>
                   </li>
                 </ul>
               </div>
               <div class="nav-actions">
-                <div class="avatar">
+                <a href="./cart.html" class="links-actions" >
+                  <img src="./images/cart-nav.svg" alt="" />
+                </a>
+                <a href="./favourite.html" class="links-actions">
+                  <img src="./images/fovourite.svg" alt="" />
+                </a>
+                <a href="./profile.html" class="avatar">
                   <img src="./images/avatar.svg" alt="" />
-                </div>
+                </a>
 
-                <a href="" class="main_btn"> انضم كبائع </a>
+                <a href="" class="main_btn" data-bs-toggle="modal" data-bs-target="#join"> انضم كبائع </a>
               </div>
 
               <!-- responsive menu -->
@@ -137,7 +146,7 @@
                 <div class="stores-cards">
                     <div class="row">
                         <div class="col-lg-3 col-md4 col-sm-6 col-12">
-                            <div class="store-card">
+                            <a href="./store.html" class="store-card">
                                 <div class="rate">
                                     <p>
                                         4.5
@@ -150,17 +159,17 @@
                                 <h3>
                                     متجر Templify
                                 </h3>
-                                <a href="" class="main_btn">
+                                <div  class="main_btn"  data-bs-toggle="modal" data-bs-target="#chat" onclick="event.preventDefault(); event.stopPropagation();">
                                     مراسلة
-                                </a>
+                                </div>
                                 <p>
                                     متجر متخصص في بيع موكابس احترافية تساعد المصممين والعلامات التجارية...
                                 </p>
-                            </div>
+                            </a>
                         </div>
                         <!--  -->
                          <div class="col-lg-3 col-md4 col-sm-6 col-12">
-                            <div class="store-card">
+                            <a href="./store.html"  class="store-card">
                                 <div class="rate">
                                     <p>
                                         4.5
@@ -173,17 +182,17 @@
                                 <h3>
                                     متجر Templify
                                 </h3>
-                                <a href="" class="main_btn">
+                                <div  class="main_btn"  data-bs-toggle="modal" data-bs-target="#chat" onclick="event.preventDefault(); event.stopPropagation();">
                                     مراسلة
-                                </a>
+                                </div>
                                 <p>
                                     متجر متخصص في بيع موكابس احترافية تساعد المصممين والعلامات التجارية...
                                 </p>
-                            </div>
+                            </a>
                         </div>
                         <!--  -->
                          <div class="col-lg-3 col-md4 col-sm-6 col-12">
-                            <div class="store-card">
+                            <a href="./store.html" class="store-card">
                                 <div class="rate">
                                     <p>
                                         4.5
@@ -196,17 +205,17 @@
                                 <h3>
                                     متجر Templify
                                 </h3>
-                                <a href="" class="main_btn">
+                                <div  class="main_btn"  data-bs-toggle="modal" data-bs-target="#chat" onclick="event.preventDefault(); event.stopPropagation();">
                                     مراسلة
-                                </a>
+                                </div>
                                 <p>
                                     متجر متخصص في بيع موكابس احترافية تساعد المصممين والعلامات التجارية...
                                 </p>
-                            </div>
+                            </a>
                         </div>
                         <!--  -->
                          <div class="col-lg-3 col-md4 col-sm-6 col-12">
-                            <div class="store-card">
+                            <a href="./store.html" class="store-card">
                                 <div class="rate">
                                     <p>
                                         4.5
@@ -219,13 +228,13 @@
                                 <h3>
                                     متجر Templify
                                 </h3>
-                                <a href="" class="main_btn">
+                                <div  class="main_btn"  data-bs-toggle="modal" data-bs-target="#chat" onclick="event.preventDefault(); event.stopPropagation();">
                                     مراسلة
-                                </a>
+                                </div>
                                 <p>
                                     متجر متخصص في بيع موكابس احترافية تساعد المصممين والعلامات التجارية...
                                 </p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -376,6 +385,129 @@
         </footer>
 
 
+
+        <!-- Modal -->
+        <div class="modal fade" id="join" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              
+              <div class="modal-body">
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <section class="auth login modal-profile">
+                 
+                  <form action="">
+                    <h1> انضم كبائع</h1>
+
+                    <p class="sub-paragraph">
+                      افتح متجرك الرقمي بسهولة وابدأ ببيع منتجاتك الإلكترونية لجمهور واسع. انضم كبائع اليوم واستفد من منصة آمنة، سريعة، وداعمة لنمو أعمالك.
+                    </p>
+
+                    
+                    <div class="form-control-container">
+                    
+
+                      <input type="text"  placeholder=" اسم المتجر  " class="form-control" aria-describedby="passwordHelpBlock">
+                    </div>
+                    <!--  -->
+                    <div class="form-control-container">
+                    
+
+                      <input type="email"  placeholder=" البريد الالكترونى  " class="form-control" aria-describedby="passwordHelpBlock">
+                    </div>
+                    <!--  -->
+                    <div class="form-control-container">
+                    
+
+                      <input type="فثءف" id="inputPassword5" placeholder="  رقم التواصل " class="form-control" aria-describedby="passwordHelpBlock">
+                    </div>
+                    <!--  -->
+                    <div class="form-control-container">
+                    
+
+                      <input type="password" id="inputPassword5" placeholder="   كلمة المرور "   class="form-control" aria-describedby="passwordHelpBlock">
+                    </div>
+                    <!--  -->
+                    <div class="form-control-container">
+                    
+
+                      <input type="password" id="inputPassword5" placeholder="  تأكيد كلمة المرور "   class="form-control" aria-describedby="passwordHelpBlock">
+                    </div>
+                    <!--  -->
+                    <div class="form-control-container">
+                      <textarea name="" id="" placeholder="نبذة عن المتجر"></textarea>
+                    </div>
+                    <!--  -->
+                    <div class="upload-box" onclick="document.getElementById('fileInput').click()">
+                      <img id="preview" src="" alt="صورة المتجر" style="display:none;" />
+                      <span id="uploadText">+ اضف صورة للمتجر</span>
+                    </div>
+
+                    <input type="file" id="fileInput" accept="image/*" style="display:none;" />
+                  
+                    
+                    <button type="submit" class="main_btn">
+                      ارسال 
+                    </button>
+                    
+                  </form>
+                </section>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+
+
+        <!-- modal -->
+
+        <!-- Modal -->
+      <div class="modal fade" id="chat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+          
+            <div class="modal-body">
+
+
+              <!--  -->
+               <div class="chat-container">
+    <!-- الهيدر -->
+    <div class="chat-header">
+      <div class="chat-header-logo">
+        <img src="./images/stores1.png" alt="">
+        متجر Templify
+      </div>
+
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <!-- جسم المحادثة -->
+    <div class="chat-body" id="chatBody">
+      <div class="message bot">
+        أهلا وسهلا بك 👋 في متجرنا! سعيدين بزيارتك 💙  
+        تقدر تتصفح منتجاتنا وتستمتع بعروضنا المميزة. لو عندك أي استفسار أنا هنا لمساعدتك
+        <div class="message-time">اليوم</div>
+      </div>
+
+      <div class="message user">
+        لو سمحت عندي مشكلة رفعت بس لينك التحميل مو شغال
+        <div class="message-time">اليوم</div>
+      </div>
+    </div>
+
+    <!-- الفوتر -->
+    <div class="chat-footer">
+      <input type="text" id="userInput" placeholder="اكتب رسالة">
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+              <!--  -->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
         <!-- rsponsive menu -->
     <div class="overlay"></div>
     <section class="responsive-menu">
@@ -387,19 +519,22 @@
       <div class="menu nav-list">
         <ul>
                   <li class="active">
-                    <a href="">الرئيسية</a>
+                    <a href="./index.html">الرئيسية</a>
                   </li>
                   <li>
-                    <a href="">النبذة</a>
+                    <a href="./about.html">النبذة</a>
                   </li>
                   <li>
-                    <a href="">المنتجات</a>
+                    <a href="./our-products.html">المنتجات</a>
                   </li>
                   <li>
-                    <a href="">المتاجر</a>
+                    <a href="./stores.html">المتاجر</a>
                   </li>
                   <li>
-                    <a href="">تواصل معنا</a>
+                    <a href="./offers.html">العروض</a>
+                  </li>
+                  <li>
+                    <a href="./index.html#contact">تواصل معنا</a>
                   </li>
                 </ul>
       </div>

@@ -282,3 +282,51 @@ $(window).on('resize', function () {
             });
         });
     });
+
+
+
+    // upload img
+
+
+     const fileInput = document.getElementById("fileInput");
+  const preview = document.getElementById("preview");
+  const uploadText = document.getElementById("uploadText");
+
+  if(fileInput){
+
+    fileInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          preview.src = e.target.result;
+          preview.style.display = "block";
+          uploadText.style.display = "none";
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+  }
+
+
+
+  // chat
+
+
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const text = input.value.trim();
+      if (text === "") return;
+
+      const chatBody = document.getElementById("chatBody");
+
+      // إنشاء رسالة جديدة
+      const msgDiv = document.createElement("div");
+      msgDiv.className = "message user";
+      msgDiv.innerHTML = text + '<div class="message-time">الآن</div>';
+
+      chatBody.appendChild(msgDiv);
+      chatBody.scrollTop = chatBody.scrollHeight; // ينزل لآخر الرسائل
+      input.value = "";
+    }

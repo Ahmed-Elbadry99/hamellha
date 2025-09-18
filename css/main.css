@@ -721,6 +721,7 @@
   border-radius: 20px;
   border: 1px solid #dfdfdf;
   padding: 5%;
+  display: block;
 }
 
 .best-seller-card .card-img {
@@ -2238,6 +2239,9 @@
 .stores-cards{
   width: 100%;
 }
+.stores-cards .row{
+  row-gap: 20px;
+}
 
 .store-card{
   border: 1px solid #DFDFDF;
@@ -2263,10 +2267,11 @@
   height: 100%;
   object-fit: contain;
 }
-
+.store-card .main_btn,
 .store-card a{
   background-color: rgba(170, 218, 216, 0.56);
   color: var(--color-black);
+  cursor: pointer;
 }
 
 .store-card .p{
@@ -3103,3 +3108,154 @@
   justify-content: center !important;
   width: 100% ;
 }
+
+
+
+
+
+
+  .upload-box {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed var(--color-primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #666;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.3s;
+        border-radius: 18px;
+
+  }
+  .upload-box:hover {
+    border-color: #333;
+    color: #333;
+  }
+  .upload-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+        border-radius: 18px;
+      
+
+  }
+
+
+   .upload-box span{
+
+    color:var(--color-primary);
+   }
+
+  .modal#join textarea{
+
+    width: 100%;
+    border-radius: 18px;
+    background-color: rgba(202, 232, 231, 0.74);
+    resize: none;
+    padding: 15px;
+  }
+
+
+  /* chat */
+
+
+
+   .chat-container {
+      width: 100%;
+      height: 600px;
+      background: #fff;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* رأس الشات */
+    .chat-header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .chat-header-logo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    
+
+    .chat-header img {
+      height: 50px;
+    }
+
+
+
+    /* جسم الشات */
+    .chat-body {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      background: #fafafa;
+    }
+
+    .message {
+      max-width: 80%;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      border-radius: 15px;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .message.bot {
+      background: #fff;
+      border: 1px solid #eee;
+      align-self: flex-start;
+    }
+
+    .message.user {
+      background: #e0f7fa;
+      align-self: flex-end;
+    }
+
+    .message-time {
+      font-size: 12px;
+      color: #999;
+      margin-top: 2px;
+    }
+
+    /* إدخال الرسالة */
+    .chat-footer {
+      border-top: 1px solid #eee;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      background: #fff;
+    }
+
+    .chat-footer input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .chat-footer button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      color: #555;
+    }
