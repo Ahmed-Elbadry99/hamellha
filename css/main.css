@@ -2697,6 +2697,11 @@
   justify-content: space-between;
 }
 
+
+.order-text-header .trash:hover
+{
+  animation: swing 1s infinite;
+}
 .profile .download{
 
   display: flex;
