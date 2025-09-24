@@ -1,0 +1,498 @@
+.content-app {
+  width: calc(100% - 300px);
+  display: flex;
+  height: 100%;
+  padding-top: 100px;
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+  float: left;
+  transition: all 0.3s linear;
+}
+
+.top-bar {
+  width: 100%;
+  height: 90px;
+  background-color: var(--color-white);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 20px ;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-page {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 40%;
+}
+
+
+.top-bar .search-page input{
+  width: 350px;
+  background-color: rgba(36, 161, 156, 0.13);
+  border-radius: 30px;
+}
+.top-bar .top-content ul {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-bar .top-content ul .avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.top-bar .notification{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(36, 161, 156, 0.13);
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s all ease-in;
+  border: 1px solid transparent;
+}
+
+.top-bar .notification:hover{
+  border: 1px solid black;
+}
+
+
+.top-bar .notification:hover img{
+ animation:  tada 1s infinite;
+
+}
+
+
+
+.top-bar.top-minimize .logo
+{
+  height: 100%;
+}
+
+.top-bar.top-minimize .logo a{
+  height: 100%;
+}
+
+.top-bar.top-minimize .logo img{
+  height: 100%;
+}
+/* home page */
+
+.app-data {
+  padding: 25px;
+  width: 100%;
+}
+
+
+
+
+.statistic-cards{
+
+  height: 160px;
+  background-color: var(--color-primary);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  
+}
+
+.statistic-cards p{
+  font-size: 30px;
+  color: #fff;
+}
+
+.statistic-cards span{
+  font-size: 24px;
+  color: #fff;
+}
+
+
+/* most-requested */
+
+.most-requested{
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.most-requested .row{
+  row-gap: 15px;
+}
+
+.sub-header{
+  font-size: 24px;
+
+
+}
+
+
+.requested-card{
+  display: flex;
+  flex-direction: column;
+  border: 1PX solid #D9D9D9;
+  border-radius: 18PX;
+}
+
+.requested-card .requested-body{
+  padding: 10px;
+}
+
+.requested-card .item-container{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #D9D9D9;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  
+}
+
+
+.most-requested .requested-card .item-container:last-child {
+  justify-content: start;
+  gap: 20px;
+  border-bottom: none;
+}
+
+.most-requested.latest-offers .requested-card .item-container:last-child {
+  justify-content: space-between;
+ 
+}
+
+
+.requested-card .item-container:last-child
+.requested-card .item-container:first-child .item-card:last-child span{
+color: red;
+
+}
+
+.requested-card .item-container:last-child .item-card:last-child span{
+  color: var(--color-primary);
+}
+
+.requested-card .img-container{
+
+  height: 120px;
+  overflow: hidden;
+  border-radius: 18px 18px 0 0;
+  position: relative;
+}
+
+.requested-card .img-container::before{
+
+  content: "";
+  background-color:rgba(0, 0, 0, 0.67) ;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+
+}
+
+
+
+
+  .more-setting {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  top: 10px;
+  left: 20px;
+  z-index: 15;
+}
+
+.more-setting .dropdown-menu {
+  position: absolute;
+  top: 25px; /* تحت الأيقونة */
+  left: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 5px 0;
+  list-style: none;
+  margin: 0;
+  display: none; /* مخفية افتراضياً */
+  width:fit-content;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 15;
+}
+
+.more-setting .dropdown-menu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.more-setting .dropdown-menu li:hover {
+  background: #f5f5f5;
+}
+
+
+.more-setting .dropdown-menu li.delete{
+  color: red;
+}
+.more-setting .dropdown-menu img {
+  width: 16px;
+  height: 16px;
+}
+
+
+.more-setting .more-btn{
+
+  height: 20px;
+}
+
+
+
+
+
+.more-setting .dropdown-menu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.more-setting .dropdown-menu li:hover {
+  background: #f5f5f5;
+}
+
+
+.more-setting .dropdown-menu li.delete{
+  color: red;
+}
+.more-setting .dropdown-menu img {
+  width: 16px;
+  height: 16px;
+}
+
+
+.more-setting .more-btn{
+
+  height: 20px;
+}
+
+
+
+.requested-card .img-container img{
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+.requested-card .img-container .delete-list {
+  left: 40px;
+}
+
+.requested-card .img-container .list-select {
+  left: 20%;
+  width: fit-content;
+  height: fit-content;
+}
+.requested-card .img-container .list-select select {
+  border: none !important;
+  width: 100%;
+}
+
+.most-requested .requested-card .item-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.most-requested .requested-card .item-card.status span{
+  color: #0ABAB5;
+}
+
+.most-requested.latest-offers .requested-card .item-container .item-card{
+
+  align-items: start;
+}
+
+.requested-card .item-card.price span{
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.requested-card .item-card.price span p{
+
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #555555 ;
+}
+
+
+.requested-title{
+  position: absolute;
+  z-index: 10;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.requested-title p{
+  color: white;
+}
+
+
+
+.requested-title span{
+
+  color: #0ABAB5;
+
+}
+.requested-card .img-container label{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  z-index: 11;
+  background-color: var(--color-primary);
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 20px;
+}
+
+
+.most-requested.latest-offers .requested-card-header{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 20px 10px 10px;
+}
+
+
+.most-requested.latest-offers .requested-card .img-container{
+
+  width: 170px;
+  height: 120px;
+  border-radius: 18px;
+}
+
+.most-requested.latest-offers .requested-card .more-setting svg path{
+  stroke: black;
+}
+
+
+
+.last-comments .row{
+
+  row-gap: 10px;
+  margin: 40px 0;
+}
+
+.last-comments .comment-card {
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.last-comments .comment-card .comment-card-header{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.last-comments .comment-card .img-container{
+  width: 150px;
+  height: 90px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+
+.last-comments .comment-card .img-container img{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.last-comments .comment-card .comment-writer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.last-comments .comment-card .writer-info{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.last-comments .comment-card .writer-info p{
+
+  color: var(--color-black);
+}
+
+
+
+.last-comments .comment-card .comment-body {
+  display: flex;
+}
+.last-comments .comment-card .comment-body .img-container{
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.last-comments .comment-card .comment-body .img-container img{
+
+  width:100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+.last-comments .comment-card .comment-body  .comment-input{
+  flex: 1;
+  position: relative;
+  height: 50px;
+}
+
+
+.last-comments .comment-card .comment-body  .comment-input input{
+
+  width: 100%;
+  padding: 0 15px ;
+  height: 100%;
+  border-radius: 40px;
+  border: 1px solid #D9D9D9;
+}
+
+
+.last-comments .comment-card .comment-body  .comment-input img{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+
+}
