@@ -1,4 +1,8 @@
 
+.m-section {
+  margin: 80px 0;
+}
+
 .sec-header{
   width: 100%;
   display: flex;
@@ -1023,4 +1027,43 @@ color: red;
   
 
 
+}
+
+.admin-accordion .accordion-item {
+  width: 95%;
+}
+
+.admin-accordion .accordion-item .delete-btn{
+  left: -40px;
+}
+
+.product-form input{
+
+    height: 55px;
+  width: 100%;
+  background-color:rgba(202, 232, 231, 0.74);
+  border-radius: 16px;
+  padding:0 20px;
+  color: #505050;
+  border: none;
+  text-align: start;
+  
+}
+
+
+.product-form textarea{
+    width: 100%;
+    background-color:rgba(202, 232, 231, 0.74);
+    border-radius: 16px;
+    padding:20px;
+    color: #505050;
+    border: none;
+    text-align: start;
+    resize: none;
+}
+
+.product-header.sec-header{
+  justify-content: start;
+  text-align: start;
+  align-items: start;
 }

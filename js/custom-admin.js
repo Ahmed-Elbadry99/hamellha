@@ -156,9 +156,113 @@ $(window).on('resize', function () {
 
 // 
 
- document.querySelectorAll(".delete-btn").forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const accordionItem = this.closest(".accordion-item");
-      accordionItem.remove();
+   function initDeleteButtons() {
+    document.querySelectorAll(".delete-btn").forEach((btn) => {
+      btn.onclick = function () {
+        this.closest(".accordion-item").remove();
+      };
     });
+  }
+  initDeleteButtons();
+
+  // كود الإضافة
+  let itemCount = 1; // عداد للعناصر
+
+  document.getElementById("saveAccordionItem").addEventListener("click", function () {
+    const title = document.getElementById("accordionTitle").value.trim();
+    const body = document.getElementById("accordionBody").value.trim();
+
+    if (!title || !body) {
+      alert("من فضلك املأ الحقول!");
+      return;
+    }
+
+    itemCount++;
+    const newId = "collapse-" + itemCount;
+
+    const newItem = `
+      <div class="accordion-item mb-3 position-relative">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#${newId}"
+            aria-expanded="false"
+            aria-controls="${newId}"
+          >
+            ${title}
+          </button>
+        </h2>
+        <div id="${newId}" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <div class="main-container">
+              <p>${body}</p>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="btn btn-link text-danger delete-btn position-absolute top-50  translate-middle-y"
+          style="font-size: 1.4rem;"
+        >
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+    `;
+
+    document.getElementById("accordionExample").insertAdjacentHTML("beforeend", newItem);
+
+    // إعادة تفعيل أزرار الحذف
+    initDeleteButtons();
+
+    // قفل المودال
+    const modal = bootstrap.Modal.getInstance(document.getElementById("addAccordionModal"));
+    modal.hide();
+
+    // تفريغ الحقول
+    document.getElementById("accordionTitle").value = "";
+    document.getElementById("accordionBody").value = "";
+  });
+
+
+
+
+
+  // 
+
+
+  const imageInput = document.getElementById("imageInput");
+  const addImageBtn = document.getElementById("addImageBtn");
+  const imagesWrapper = document.getElementById("imagesWrapper");
+
+  // حذف صورة
+  document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("delete-btn")) {
+      e.target.closest(".image-box").remove();
+    }
+  });
+
+  // عند الضغط على + نفتح اختيار الملفات
+  addImageBtn.addEventListener("click", function () {
+    imageInput.click();
+  });
+
+  // لما المستخدم يختار صورة
+  imageInput.addEventListener("change", function () {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const newImage = `
+          <div class="image-box">
+            <img src="${e.target.result}" alt="Product">
+            <button type="button" class="delete-btn">&times;</button>
+          </div>
+        `;
+        addImageBtn.insertAdjacentHTML("beforebegin", newImage);
+      };
+      reader.readAsDataURL(file);
+    }
+    this.value = ""; // علشان لو اختار نفس الصورة تاني يشتغل
   });
