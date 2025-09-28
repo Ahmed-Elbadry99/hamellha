@@ -231,17 +231,24 @@ $(window).on('resize', function () {
 
   // 
 
-
+  
   const imageInput = document.getElementById("imageInput");
   const addImageBtn = document.getElementById("addImageBtn");
   const imagesWrapper = document.getElementById("imagesWrapper");
 
-  // حذف صورة
+  
+ 
+    
+      // حذف صورة
   document.addEventListener("click", function (e) {
     if (e.target.classList.contains("delete-btn")) {
       e.target.closest(".image-box").remove();
     }
   });
+
+
+   if(addImageBtn){
+
 
   // عند الضغط على + نفتح اختيار الملفات
   addImageBtn.addEventListener("click", function () {
@@ -266,3 +273,156 @@ $(window).on('resize', function () {
     }
     this.value = ""; // علشان لو اختار نفس الصورة تاني يشتغل
   });
+
+
+
+  }
+
+  // 
+
+
+
+   // إظهار اسم الملف في مربع رفع المنتج
+    const productFileInput = document.getElementById('product-file');
+    const productFileText = document.getElementById('product-file-text');
+
+    console.log("dsgfedsgfe");
+    
+
+    if(productFileInput){
+
+      productFileInput.addEventListener('change', function () {
+        if (this.files.length > 0) {
+          productFileText.textContent = this.files[0].name;
+        } else {
+          productFileText.textContent = "قم برفع المنتج";
+        }
+      });
+
+
+    }
+
+
+
+
+
+    // عرض الصور المرفوعة + زرار حذف
+    const productImagesInput = document.getElementById('product-images');
+    const previewContainer = document.getElementById('preview-container');
+
+
+
+    if(productImagesInput){
+
+      productImagesInput.addEventListener('change', function () {
+        Array.from(this.files).forEach(file => {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const previewItem = document.createElement('div');
+            previewItem.classList.add('preview-item');
+            previewItem.innerHTML = `
+              <img src="${e.target.result}" alt="صورة المنتج">
+              <button class="remove-btn">&times;</button>
+            `;
+            previewContainer.appendChild(previewItem);
+  
+            // زرار الحذف
+            previewItem.querySelector('.remove-btn').addEventListener('click', function () {
+              previewItem.remove();
+            });
+          }
+          reader.readAsDataURL(file);
+        });
+  
+        // مسح القيمة عشان تقدر ترفع نفس الصورة تاني لو حبيت
+        this.value = "";
+      });
+
+
+    }
+
+
+
+    // 
+
+
+
+     // معاينة الصورة بعد الرفع
+    const input = document.getElementById('profile-input');
+    const img = document.getElementById('profile-img');
+
+
+    if(input){
+
+      input.addEventListener('change', function () {
+        if (this.files && this.files[0]) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            img.src = e.target.result;
+          };
+          reader.readAsDataURL(this.files[0]);
+        }
+      });
+
+
+    }
+
+
+
+
+    // 
+
+    const multiSelect = document.getElementById("multi-select");
+
+    if(multiSelect){
+
+      $(document).ready(function() {
+ 
+ 
+       $('#multi-select').select2({
+         placeholder: "ابحث واختر المنتجات",
+         allowClear: true
+       });
+     });
+
+    }
+
+
+
+    // 
+
+
+     const fileInput = document.getElementById('fileInput2');
+    const preview = document.getElementById('preview');
+    const uploadText = document.querySelector('.upload-text2');
+
+
+
+    if(fileInput){
+
+      fileInput.addEventListener('change', function () {
+        if (this.files && this.files[0]) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+            uploadText.style.background = 'white';
+          };
+          reader.readAsDataURL(this.files[0]);
+        }
+      });
+    }
+
+
+
+    // 
+
+
+    
+      
+  const checkbox = document.getElementById("disableDiscountAdd");
+    const discountInput = document.getElementById("discountInputAdd");
+
+    checkbox.addEventListener("change", function () {
+      discountInput.disabled = !this.checked;
+    });
