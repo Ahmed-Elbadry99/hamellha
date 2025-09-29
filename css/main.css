@@ -3328,3 +3328,48 @@
     .contact-header-card span{
       font-size: 20px;
     }
+
+
+
+    /* our-partner */
+
+
+
+
+    .our-partner-card{
+
+
+    }
+
+
+
+    
+.our-partner-card {
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid #dfdfdf;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.our-partner-card .card-img {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.our-partner-card .card-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.our-partner-card h3 {
+  font-size: 22px;
+}
