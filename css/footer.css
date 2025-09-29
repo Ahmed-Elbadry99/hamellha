@@ -113,6 +113,7 @@ footer .main-container{
 .footer-end i{
     color: red;
     animation: pulse 1s infinite;
+    display: inline-block;
 }
 .footer-item p{
     color: white;

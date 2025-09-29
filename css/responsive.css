@@ -379,6 +379,11 @@ linear infinite;
 }
 
 
+  .about {
+    padding-top: 130px;
+  }
+
+
 
       .journy-cards .card-p {
         width: 170px;
@@ -495,6 +500,7 @@ linear infinite;
   .slick-prev, .slick-next{
     display: none;
   }
+
 }
 
 
@@ -644,6 +650,11 @@ linear infinite;
     font-size: 16px;
     margin-bottom: 10px;
   }
+
+  .about .paint-img svg{
+    height: 180px;
+  }
+
 }
 @media(max-width: 570px){
 
@@ -907,7 +918,11 @@ display: none;
 @media(max-width: 425px){
 
 
+  
+header {
+    height: 100vh;
 
+}
   .journy-cards .card-p{
 
     gap: 5px;
