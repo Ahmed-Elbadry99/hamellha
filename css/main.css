@@ -1521,10 +1521,22 @@
   left: 0;
   top: 150%;
 
+
+
+
+  max-height: 80vh;
+  overflow-y: auto;
+  transition: opacity .12s ease, transform .12s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  background: #fff;
+  z-index: 9999;
+  display: none;
 }
 
 .filters.show {
     display: block;
+      opacity: 1;
 }
 
 
@@ -1571,6 +1583,25 @@
 .filter-section input[type="checkbox"]:checked {
   accent-color: #24A19C; /* يغير لون المربع */
 }
+
+
+.filter-section .filter-section-header{
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.filter-section .filter-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.filter-section.open .filter-content {
+  max-height: 500px; /* حسب حجم المحتوى */
+}
+
 
 .sub {
   margin-right: 15px;

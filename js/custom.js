@@ -211,6 +211,15 @@ const toggleBtn = document.getElementById("toggleFilter");
  }
 
 
+ document.querySelectorAll('.filter-section .filter-section-header').forEach((header) => {
+  header.addEventListener('click', () => {
+    const section = header.parentElement;
+    section.classList.toggle('open');
+  });
+});
+
+
+
 
     // details slider
 
@@ -330,3 +339,11 @@ $(window).on('resize', function () {
       chatBody.scrollTop = chatBody.scrollHeight; // ينزل لآخر الرسائل
       input.value = "";
     }
+
+
+
+
+    // 
+
+
+    
