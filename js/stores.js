@@ -1,55 +1,43 @@
-const btnOpen = document.querySelector(".chat-widget-container .btn-chat-widget button");
+const btnContainer = document.querySelector(".btn-chat-widget");
+const btnOpen = document.querySelector(".btn-chat-widget button");
 const boxChat = document.querySelector(".chat-widget-container .chat-widget-Box");
 const btnClose = document.querySelector(".chat-widget-Box .head i");
-
 const boxMessage = document.querySelector(".chat-widget-container .chat-widget-Box .body .boxMessage");
 const messageDetails = document.querySelector(".chat-widget-container .chat-widget-Box .message-details");
 const btnMessageAll = document.querySelector(".chat-widget-Box span.i-message");
-
 const inputGroup = document.querySelector(".chat-widget-container .chat-widget-Box .body .input-group");
-
 const btnSend = document.querySelector(".chat-widget-container .chat-widget-Box .message-details .inputSend button");
 const inputChat = document.querySelector(".chat-widget-container .chat-widget-Box .message-details .inputSend input");
 const messages = document.querySelector(".chat-widget-container .chat-widget-Box .message-details .messagesBox");
 
-//! Box Chat فتح
+const btnModal = document.querySelectorAll(".our-stores .stores-cards .main_btn");
+
+
+//! فتح وقفل البوكس
 btnOpen.addEventListener("click", function () {
-    if (boxChat.classList.contains("closeBox")) { // مقفول
-        // هيفتح البوكس
+    if (boxChat.classList.contains("closeBox")) {
         boxChat.classList.add("openBox");
         boxChat.classList.remove("closeBox");
         // هيخفى الزرار
-        btnOpen.classList.add("hideBtnBox");
-        btnOpen.classList.remove("showBtnBox");
+        btnContainer.classList.add("hideBtnBox");
+        btnContainer.classList.remove("showBtnBox");
     }
-    else { // مفتوح
-        // هيقفل البوكس
-        boxChat.classList.remove("openBox");
+    else {
         boxChat.classList.add("closeBox");
+        boxChat.classList.remove("openBox");
         // هيظهر الزرار
-        btnOpen.classList.remove("hideBtnBox");
-        btnOpen.classList.add("showBtnBox");
+        btnContainer.classList.remove("hideBtnBox");
+        btnContainer.classList.add("showBtnBox");
     }
 });
 
-//! Box Chat قفل
-btnClose.addEventListener("click", function(){
-    if (boxChat.classList.contains("openBox")) { // مفتوح
-        // هيقفل البوكس
-        boxChat.classList.add("closeBox");
-        boxChat.classList.remove("openBox");
-        // هيظهر الزرار
-        btnOpen.classList.add("showBtnBox");
-        btnOpen.classList.remove("hideBtnBox");
-    }
-    else { // مقفول
-        // هيقفل البوكس
-        boxChat.classList.remove("closeBox");
-        boxChat.classList.add("openBox");
-        // هيظهر الزرار
-        btnOpen.classList.remove("showBtnBox");
-        btnOpen.classList.add("hideBtnBox");
-    }
+//! لما يدوس على الـ X يقفله
+btnClose.addEventListener("click", function () {
+    boxChat.classList.add("closeBox");
+    boxChat.classList.remove("openBox");
+    // يظهر الزرار تانى
+    btnContainer.classList.add("showBtnBox");
+    btnContainer.classList.remove("hideBtnBox");
 });
 
 //! Message-Details فتح
@@ -58,6 +46,7 @@ boxMessage.addEventListener("click",function(){
     boxMessage.classList.add("d-none");
     inputGroup.classList.add("d-none");
     btnMessageAll.classList.remove("d-none");
+    inputChat.focus();
 });
 
 //! Message-Details قفل
@@ -68,6 +57,27 @@ btnMessageAll.addEventListener("click",function(){
     btnMessageAll.classList.add("d-none");
 });
 
+//! (مراسلة) Modal تعديل إخفاء ال
+btnModal.forEach( (btn) => {
+    
+    btn.addEventListener("click",function(){
+        if (boxChat.classList.contains("closeBox")) {
+            boxChat.classList.add("openBox");
+            boxChat.classList.remove("closeBox");
+
+            messageDetails.classList.remove("d-none");
+            boxMessage.classList.add("d-none");
+
+            inputGroup.classList.add("d-none");
+            btnMessageAll.classList.remove("d-none");
+            inputChat.focus();
+
+            // هيخفى الزرار
+            btnContainer.classList.add("hideBtnBox");
+            btnContainer.classList.remove("showBtnBox");
+        }
+    });
+});
 
 // ببعت رسالة
 btnSend.addEventListener("click", function () {
@@ -90,3 +100,5 @@ inputChat.addEventListener("keyup", function (e) {
         btnSend.click();
     }
 });
+
+

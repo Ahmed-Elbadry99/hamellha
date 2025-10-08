@@ -84,10 +84,12 @@
       <main id="app">
 
         <!--! Btn Chat-widget -->
-        <section class="chat-widget-container">
           <div class="btn-chat-widget">
             <button>جميع المحادثات</button>
           </div>
+
+        <!--! container Chat-widget -->
+        <section class="chat-widget-container">
 
           <!--! Box Chat-widget -->
           <div class="chat-widget-Box closeBox">
@@ -145,6 +147,7 @@
           </div>
         </section>
 
+        
         <header class="pages">
           <div class="main-container">
             <nav>
@@ -203,6 +206,8 @@
           </div>
         </header>
 
+
+        <!--! Modal تعديل إخفاء ال -->
         <section class="our-stores">
           <div class="main-container">
             <h2 class="sub-title">المتاجر</h2>
@@ -226,14 +231,16 @@
                       <img src="./images/stores1.png" alt="" />
                     </div>
                     <h3>متجر Templify</h3>
-                    <div
-                      class="main_btn"
-                      data-bs-toggle="modal"
-                      data-bs-target="#chat"
-                      onclick="event.preventDefault(); event.stopPropagation();"
-                    >
+
+                  <!--
+                    data-bs-toggle="modal"
+                    data-bs-target="#chat"
+                    onclick="event.preventDefault(); event.stopPropagation();"
+                    -->
+                    <div class="main_btn" onclick="event.preventDefault();">
                       مراسلة
                     </div>
+
                     <p>
                       متجر متخصص في بيع موكابس احترافية تساعد المصممين والعلامات
                       التجارية...
@@ -253,9 +260,7 @@
                     <h3>متجر Templify</h3>
                     <div
                       class="main_btn"
-                      data-bs-toggle="modal"
-                      data-bs-target="#chat"
-                      onclick="event.preventDefault(); event.stopPropagation();"
+                      onclick="event.preventDefault();"
                     >
                       مراسلة
                     </div>
@@ -278,9 +283,7 @@
                     <h3>متجر Templify</h3>
                     <div
                       class="main_btn"
-                      data-bs-toggle="modal"
-                      data-bs-target="#chat"
-                      onclick="event.preventDefault(); event.stopPropagation();"
+                      onclick="event.preventDefault();"
                     >
                       مراسلة
                     </div>
@@ -303,9 +306,7 @@
                     <h3>متجر Templify</h3>
                     <div
                       class="main_btn"
-                      data-bs-toggle="modal"
-                      data-bs-target="#chat"
-                      onclick="event.preventDefault(); event.stopPropagation();"
+                      onclick="event.preventDefault();"
                     >
                       مراسلة
                     </div>
@@ -319,6 +320,20 @@
             </div>
           </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- footer -->
         <footer>

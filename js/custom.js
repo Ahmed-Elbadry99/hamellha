@@ -273,8 +273,7 @@ $(window).on('resize', function () {
 
 
 // verification code 
-
- document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
         const inputs = document.querySelectorAll('.code-input');
 
         inputs.forEach((input, index) => {
@@ -295,9 +294,7 @@ $(window).on('resize', function () {
 
 
     // upload img
-
-
-     const fileInput = document.getElementById("fileInput");
+    const fileInput = document.getElementById("fileInput");
   const preview = document.getElementById("preview");
   const uploadText = document.getElementById("uploadText");
 
@@ -321,8 +318,6 @@ $(window).on('resize', function () {
 
 
   // chat
-
-
     function sendMessage() {
       const input = document.getElementById("userInput");
       const text = input.value.trim();
@@ -340,10 +335,3 @@ $(window).on('resize', function () {
       input.value = "";
     }
 
-
-
-
-    // 
-
-
-    

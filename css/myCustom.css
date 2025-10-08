@@ -80,10 +80,16 @@
 /*! *************** Stores *************** !*/
 /*? قفل وفتح البوكس */
 .openBox {
-    left: 0%;
+    opacity: 1;
+    pointer-events: auto;
+    /* transform: translateY(0); */
+    right: 0;
 }
 .closeBox {
-    left: 120%;
+    opacity: 0;
+    pointer-events: none;
+    /* transform: translateY(20px); */
+    right: -300px;
 }
 /* إظهار وإخفاء الزرار */
 .showBtnBox {
@@ -100,41 +106,53 @@
 /*? Section chat-widget-container */
 .chat-widget-container {
     position: fixed;
-    width: 300px;
     bottom: 0;
     right: 0;
+    width: 300px;
     z-index: 9999;
 }
+.chat-widget-container .chat-widget-Box {
+    position: absolute;
+    bottom: 0;
+    /* right: -300px; */
+    width: 300px;
+    height: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #229A96;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
 .chat-widget-container p {
     font-size: 18px;
     font-weight: 100;
 }
-.chat-widget-container .chat-widget-Box {
-    background-color: #229A96;
-    padding: 10px;
-    border-radius: 5px 5px 0 0;
-    transition: .3s;
-    position: relative;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #fff;
-}
-.chat-widget-container .btn-chat-widget button {
-    position: absolute;
+
+/* الزرار يفضل ثابت وميختفيش */
+.btn-chat-widget {
+    position: fixed;
     right: 0;
     bottom: 0;
-    z-index: 9999;
-    background-color: #239C98;
-    border-radius: 5px 5px 0 0;
+    z-index: 10000;
+}
+
+.btn-chat-widget button {
     width: 300px;
     height: 40px;
+    background-color: #239C98;
+    border-radius: 5px 5px 0 0;
     color: white;
     border: 1px solid #a3a1a1;
     border-bottom: none;
     font-size: 20px;
-    transition: .2s;
+    cursor: pointer;
+    transition: 0.2s;
 }
+
 .chat-widget-Box .head i {
     width: 25px;
     height: 25px;
@@ -282,7 +300,7 @@
     width: 30%;
     height: 1000px;
     position: absolute;
-    background-image: url(../images/tree-money.svg);
+    background-image: url("../images/tree-money.svg");
     background-size: contain;
     background-repeat: repeat;
     top: 55px;
@@ -298,3 +316,112 @@
         background-position-y: 1000px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! *************** Swiper Offers *************** !*/
+.owl-stage {
+    direction: rtl;
+    transition: 2s;
+}
+.owl-item{
+    border-radius: 20px;
+    /* padding: 0 5px; */
+}
+.owl-dots {
+    text-align: center;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    background-color: #229a968c;
+    padding: 5px !important;
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    border-radius: 50%;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot.active {
+    background-color: #229A96;
+}
+.offer-panner {
+    min-height: auto;
+    padding: 0;
+}
+.offer-panner .offer-bg {
+    width: 250px;
+    bottom: -127px;
+    left: 35%;
+}
+.offer-panner .offer-paint.left {
+    top: -5px;
+    left: 300px;
+}
+.offer-panner .row .panner-text { /* col(1)*/
+    padding: 20px;
+}
+
+
+
+
+
+.offer-panner .img-panner .img-panner-bg {
+    width: 300px;
+    height: 300px;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 2px solid blue;
+    border-radius: 50%;
+
+
+
+    position: relative;
+    left: -55px;
+    bottom: -35px;
+}
+
+
+
+/*.offer-panner .img-panner { col(2)
+    width: fit-content;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-panner .img-panner img {
+    position: relative;
+    z-index: 99;
+}
+.offer-panner .img-panner::before {
+    content: "";
+    width: 20px;
+    height: 75%;
+    background-color: #87F4F0;
+    border-radius: 7px;
+    position: absolute;
+    right: 40px;
+    top: -20px;
+    transform: rotate(334deg);
+}
+.offer-panner .img-panner::after {
+    content: "";
+    width: 20px;
+    height: 60%;
+    background-color: #87F4F0;
+    border-radius: 7px;
+    position: absolute;
+    right: 70px;
+    bottom: -60px;
+    transform: rotate(243deg);
+} */
